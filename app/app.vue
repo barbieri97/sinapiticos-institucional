@@ -7,8 +7,7 @@ useHead({
     { rel: 'icon', href: '/favicon.ico' }
   ],
   htmlAttrs: {
-    lang: 'pt-BR',
-    class: 'light'
+    lang: 'pt-BR'
   }
 })
 </script>
