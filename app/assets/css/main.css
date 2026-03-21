@@ -52,6 +52,7 @@
   --ui-primary:   var(--color-primary-500);
   --ui-secondary: var(--color-secondary-500);
   --ui-radius:    0.5rem;
+  color-scheme: light;
 }
 
 /* ─────────────────────────────────────────
