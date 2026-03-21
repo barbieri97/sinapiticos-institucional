@@ -1,4 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { readFileSync } from 'node:fs'
+
+const { version } = JSON.parse(readFileSync('./package.json', 'utf-8'))
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-01',
   devtools: { enabled: true },
@@ -46,6 +50,12 @@ export default defineNuxtConfig({
       { name: 'Nunito', provider: 'google', weights: [400, 600, 700, 800, 900] },
       { name: 'DM Sans', provider: 'google', weights: [400, 500], styles: ['normal', 'italic'] },
     ],
+  },
+
+  runtimeConfig: {
+    public: {
+      appVersion: version,
+    },
   },
 
   css: ['~/assets/css/main.css'],

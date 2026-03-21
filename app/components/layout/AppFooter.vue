@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { appVersion } = useRuntimeConfig().public
+
 const pageLinks = [
   { label: 'Sobre', to: '/sobre' },
   { label: 'Serviços', to: '/servicos' },
@@ -80,8 +82,8 @@ const pageLinks = [
           © {{ new Date().getFullYear() }} sinapíticos — instituto de desenvolvimento infantil.
           Fundado por André Barbieri &amp; Carolina Teixeira.
         </p>
-        <p class="font-sans text-primary-500 text-xs">
-          Todos os direitos reservados.
+        <p class="font-sans text-primary-600 text-xs font-mono">
+          v{{ appVersion }}
         </p>
       </div>
     </div>
