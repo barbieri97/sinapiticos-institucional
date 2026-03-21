@@ -1,60 +1,32 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { readFileSync } from 'node:fs'
+import { readFileSync } from "node:fs";
 
-const { version } = JSON.parse(readFileSync('./package.json', 'utf-8'))
+const { version } = JSON.parse(readFileSync("./package.json", "utf-8"));
 
 export default defineNuxtConfig({
-  compatibilityDate: '2025-01-01',
-  devtools: { enabled: true },
-
-  future: {
-    compatibilityVersion: 4,
-  },
+  modules: [
+    "@nuxt/eslint",
+    "@nuxt/ui",
+    "@nuxt/content",
+    "@nuxt/image",
+    "@nuxt/fonts",
+  ],
 
   components: [
     {
-      path: '~/components',
+      path: "~/components",
       pathPrefix: false,
     },
   ],
+  devtools: { enabled: true },
 
-  modules: [
-    '@nuxt/eslint',
-    '@nuxt/ui',
-    '@nuxt/content',
-    '@nuxt/image',
-    '@nuxt/fonts',
-  ],
+  css: ["~/assets/css/main.css"],
 
   // ── Tema: forçar light mode independente da preferência do sistema ──
   colorMode: {
-    preference: 'light',
-  },
-
-  // ── Deploy: Vercel (SSR) ─────────────────────────────────────────
-  nitro: {
-    preset: 'vercel',
-  },
-
-  // ── Imagens: provider Vercel ─────────────────────────────────────
-  image: {
-    provider: 'vercel',
-    screens: {
-      sm: 640,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
-      '2xl': 1536,
-    },
-    format: ['webp', 'avif', 'jpeg'],
-    quality: 80,
-  },
-
-  fonts: {
-    families: [
-      { name: 'Nunito', provider: 'google', weights: [400, 600, 700, 800, 900] },
-      { name: 'DM Sans', provider: 'google', weights: [400, 500], styles: ['normal', 'italic'] },
-    ],
+    preference: "light",
+    fallback: "light",
+    classSuffix: "",
   },
 
   runtimeConfig: {
@@ -63,20 +35,58 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['~/assets/css/main.css'],
+  future: {
+    compatibilityVersion: 4,
+  },
+  compatibilityDate: "2025-01-01",
+
+  // ── Deploy: Vercel (SSR) ─────────────────────────────────────────
+  nitro: {
+    preset: "vercel",
+  },
 
   vite: {
     optimizeDeps: {
-      include: ['reka-ui'],
+      include: ["reka-ui"],
     },
   },
 
   eslint: {
     config: {
       stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs',
+        commaDangle: "never",
+        braceStyle: "1tbs",
       },
     },
   },
-})
+
+  fonts: {
+    families: [
+      {
+        name: "Nunito",
+        provider: "google",
+        weights: [400, 600, 700, 800, 900],
+      },
+      {
+        name: "DM Sans",
+        provider: "google",
+        weights: [400, 500],
+        styles: ["normal", "italic"],
+      },
+    ],
+  },
+
+  // ── Imagens: provider Vercel ─────────────────────────────────────
+  image: {
+    provider: "vercel",
+    screens: {
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      "2xl": 1536,
+    },
+    format: ["webp", "avif", "jpeg"],
+    quality: 80,
+  },
+});
