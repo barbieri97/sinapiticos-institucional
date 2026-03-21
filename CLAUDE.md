@@ -643,6 +643,10 @@ useHead({
 
 ## 12. Regras para o Claude Code
 
+> **Referência de componentes NuxtUI:** antes de implementar qualquer componente de UI, consulte sempre a documentação em:
+> `https://ui.nuxt.com/llms.txt` — índice completo de todos os componentes, props e slots.
+> Prefira componentes nativos do NuxtUI (`UHeader`, `UFooter`, `UFooterColumns`, `UNavigationMenu`, etc.) antes de criar estruturas HTML manuais equivalentes.
+
 1. **Sempre** usar `<script setup lang="ts">` nos componentes Vue
 2. **Preferir componentes NuxtUI** (`UButton`, `UCard`, `UForm`, `UInput`, etc.) antes de criar elementos HTML crus
 3. **Sempre** usar classes Tailwind v4 para layout, espaçamento e tipografia — nunca `<style scoped>` para isso

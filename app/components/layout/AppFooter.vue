@@ -1,92 +1,82 @@
 <script setup lang="ts">
+import type { FooterColumn } from '@nuxt/ui'
+
 const { appVersion } = useRuntimeConfig().public
 const contact = useSiteContact()
 
-const pageLinks = [
-  { label: 'Sobre', to: '/sobre' },
-  { label: 'Serviços', to: '/servicos' },
-  { label: 'Equipe', to: '/equipe' },
-  { label: 'Ação Social', to: '/acao-social' },
-  { label: 'Recursos', to: '/recursos' },
-  { label: 'Contato', to: '/contato' },
+const columns: FooterColumn[] = [
+  {
+    label: 'Navegação',
+    children: [
+      { label: 'Sobre', to: '/sobre' },
+      { label: 'Serviços', to: '/servicos' },
+      { label: 'Equipe', to: '/equipe' },
+      { label: 'Ação Social', to: '/acao-social' },
+      { label: 'Recursos', to: '/recursos' },
+      { label: 'Contato', to: '/contato' }
+    ]
+  },
+  {
+    label: 'Contato',
+    children: [
+      { label: 'WhatsApp', to: contact.whatsappUrl, target: '_blank', icon: 'i-lucide-phone' },
+      { label: contact.email, to: contact.mailtoUrl, icon: 'i-lucide-mail' },
+      { label: contact.instagramHandle, to: contact.instagramUrl, target: '_blank', icon: 'i-lucide-instagram' }
+    ]
+  }
 ]
 </script>
 
 <template>
-  <footer class="bg-primary-900 text-white mt-0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <!-- Brand -->
-        <div class="flex flex-col gap-3">
-          <div class="flex items-center gap-2">
-            <NeuronDeco class="w-8 h-8 opacity-90" />
-            <div class="flex flex-col leading-none">
-              <span class="font-display font-black text-white text-lg">sinapíticos</span>
-              <span class="font-sans text-primary-200 text-[10px] uppercase tracking-widest">instituto de desenvolvimento infantil</span>
+  <UFooter
+    :ui="{
+      root: 'bg-primary-900 text-white',
+      top: 'py-12 border-b border-primary-700',
+      bottom: 'py-4'
+    }"
+  >
+    <template #top>
+      <UContainer :ui="{ base: 'max-w-7xl' }">
+        <UFooterColumns
+          :columns="columns"
+          :ui="{
+            root: 'xl:grid-cols-[1fr_repeat(2,minmax(0,1fr))]',
+            label: 'font-display font-bold text-sm uppercase tracking-widest text-primary-300 mb-4',
+            link: 'font-sans text-primary-100 hover:text-secondary-400 text-sm transition-colors'
+          }"
+        >
+          <!-- Brand block -->
+          <template #left>
+            <div class="flex flex-col gap-3">
+              <div class="flex items-center gap-2">
+                <NeuronDeco class="w-8 h-8 opacity-90" />
+                <div class="flex flex-col leading-none">
+                  <span class="font-display font-black text-white text-lg">sinapíticos</span>
+                  <span class="font-sans text-primary-200 text-[10px] uppercase tracking-widest">instituto de desenvolvimento infantil</span>
+                </div>
+              </div>
+              <p class="font-sans text-primary-200 text-sm leading-relaxed max-w-xs">
+                Rigor científico e cuidado humano no desenvolvimento de cada pitico.
+              </p>
             </div>
-          </div>
-          <p class="font-sans text-primary-200 text-sm leading-relaxed max-w-xs">
-            Rigor científico e cuidado humano no desenvolvimento de cada pitico.
-          </p>
-        </div>
+          </template>
+        </UFooterColumns>
+      </UContainer>
+    </template>
 
-        <!-- Links -->
-        <div>
-          <h3 class="font-display font-bold text-sm uppercase tracking-widest text-primary-300 mb-4">Navegação</h3>
-          <ul class="flex flex-col gap-2">
-            <li v-for="link in pageLinks" :key="link.to">
-              <NuxtLink
-                :to="link.to"
-                class="font-sans text-primary-100 hover:text-secondary-400 text-sm transition-colors"
-              >
-                {{ link.label }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
+    <!-- Copyright -->
+    <template #left>
+      <p class="font-sans text-primary-400 text-xs">
+        © {{ new Date().getFullYear() }} sinapíticos — instituto de desenvolvimento infantil.
+        Fundado por André Barbieri &amp; Carolina Teixeira.
+      </p>
+    </template>
 
-        <!-- Contact -->
-        <div>
-          <h3 class="font-display font-bold text-sm uppercase tracking-widest text-primary-300 mb-4">Contato</h3>
-          <div class="flex flex-col gap-3">
-            <a
-              :href="contact.whatsappUrl"
-              target="_blank"
-              rel="noopener"
-              class="flex items-center gap-2 font-sans text-primary-100 hover:text-secondary-400 text-sm transition-colors"
-            >
-              <UIcon name="i-lucide-phone" class="text-secondary-400 shrink-0" />
-              WhatsApp
-            </a>
-            <a
-              :href="contact.mailtoUrl"
-              class="flex items-center gap-2 font-sans text-primary-100 hover:text-secondary-400 text-sm transition-colors"
-            >
-              <UIcon name="i-lucide-mail" class="text-secondary-400 shrink-0" />
-              {{ contact.email }}
-            </a>
-            <a
-              :href="contact.instagramUrl"
-              target="_blank"
-              rel="noopener"
-              class="flex items-center gap-2 font-sans text-primary-100 hover:text-secondary-400 text-sm transition-colors"
-            >
-              <UIcon name="i-lucide-instagram" class="text-secondary-400 shrink-0" />
-              {{ contact.instagramHandle }}
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-10 pt-6 border-t border-primary-700 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p class="font-sans text-primary-400 text-xs">
-          © {{ new Date().getFullYear() }} sinapíticos — instituto de desenvolvimento infantil.
-          Fundado por André Barbieri &amp; Carolina Teixeira.
-        </p>
-        <p class="font-sans text-primary-600 text-xs font-mono">
-          v{{ appVersion }}
-        </p>
-      </div>
-    </div>
-  </footer>
+    <!-- Versão -->
+    <template #right>
+      <p class="font-mono text-primary-600 text-xs">
+        v{{ appVersion }}
+      </p>
+    </template>
+  </UFooter>
 </template>
