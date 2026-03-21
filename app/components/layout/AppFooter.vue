@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { appVersion } = useRuntimeConfig().public
+const contact = useSiteContact()
 
 const pageLinks = [
   { label: 'Sobre', to: '/sobre' },
@@ -49,7 +50,7 @@ const pageLinks = [
           <h3 class="font-display font-bold text-sm uppercase tracking-widest text-primary-300 mb-4">Contato</h3>
           <div class="flex flex-col gap-3">
             <a
-              href="https://wa.me/5511999999999"
+              :href="contact.whatsappUrl"
               target="_blank"
               rel="noopener"
               class="flex items-center gap-2 font-sans text-primary-100 hover:text-secondary-400 text-sm transition-colors"
@@ -58,20 +59,20 @@ const pageLinks = [
               WhatsApp
             </a>
             <a
-              href="mailto:contato@sinapiticos.com.br"
+              :href="contact.mailtoUrl"
               class="flex items-center gap-2 font-sans text-primary-100 hover:text-secondary-400 text-sm transition-colors"
             >
               <UIcon name="i-lucide-mail" class="text-secondary-400 shrink-0" />
-              contato@sinapiticos.com.br
+              {{ contact.email }}
             </a>
             <a
-              href="https://instagram.com/sinapiticos"
+              :href="contact.instagramUrl"
               target="_blank"
               rel="noopener"
               class="flex items-center gap-2 font-sans text-primary-100 hover:text-secondary-400 text-sm transition-colors"
             >
               <UIcon name="i-lucide-instagram" class="text-secondary-400 shrink-0" />
-              @sinapiticos
+              {{ contact.instagramHandle }}
             </a>
           </div>
         </div>

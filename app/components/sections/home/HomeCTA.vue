@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const contact = useSiteContact()
 </script>
 
 <template>
@@ -25,7 +26,7 @@
           Agende uma avaliação
         </UButton>
         <UButton
-          href="https://wa.me/5511999999999"
+          :href="contact.whatsappUrl"
           target="_blank"
           rel="noopener"
           color="secondary"

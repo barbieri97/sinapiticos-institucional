@@ -32,6 +32,11 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       appVersion: version,
+      whatsappNumber: '',
+      whatsappDisplay: '',
+      email: '',
+      instagramHandle: '',
+      formspreeId: '',
     },
   },
 

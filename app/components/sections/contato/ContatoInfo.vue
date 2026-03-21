@@ -1,24 +1,26 @@
 <script setup lang="ts">
+const contact = useSiteContact()
+
 const infos = [
   {
     icon: 'i-lucide-phone',
     label: 'WhatsApp',
-    value: '(11) 99999-9999',
-    href: 'https://wa.me/5511999999999',
+    value: contact.whatsappDisplay,
+    href: contact.whatsappUrl,
     target: '_blank',
   },
   {
     icon: 'i-lucide-mail',
     label: 'E-mail',
-    value: 'contato@sinapiticos.com.br',
-    href: 'mailto:contato@sinapiticos.com.br',
+    value: contact.email,
+    href: contact.mailtoUrl,
     target: undefined,
   },
   {
     icon: 'i-lucide-instagram',
     label: 'Instagram',
-    value: '@sinapiticos',
-    href: 'https://instagram.com/sinapiticos',
+    value: contact.instagramHandle,
+    href: contact.instagramUrl,
     target: '_blank',
   },
   {

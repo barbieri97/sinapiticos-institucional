@@ -66,8 +66,8 @@ async function onSubmit() {
   sending.value = true;
   error.value = "";
   try {
-    const formspreeId = "xbdzeyop";
-    const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
+    const { formspreeUrl } = useSiteContact()
+    const res = await fetch(formspreeUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
