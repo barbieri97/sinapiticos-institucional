@@ -26,6 +26,11 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
   ],
 
+  // ── Tema: forçar light mode independente da preferência do sistema ──
+  colorMode: {
+    preference: 'light',
+  },
+
   // ── Deploy: Vercel (SSR) ─────────────────────────────────────────
   nitro: {
     preset: 'vercel',
