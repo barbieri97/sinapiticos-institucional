@@ -1,0 +1,52 @@
+# ─────────────────────────────────────────────────────────────
+# .claudeignore — Sinapíticos
+# Arquivos que o Claude Code não precisa ler durante o desenvolvimento.
+# Foco: economizar tokens e manter contexto relevante.
+# ─────────────────────────────────────────────────────────────
+
+
+# ── Dependências ──────────────────────────────────────────────
+node_modules/
+.nuxt/
+.output/
+.vercel/
+
+
+# ── Cache & build ─────────────────────────────────────────────
+.cache/
+dist/
+.nitro/
+*.log
+*.tsbuildinfo
+
+
+# ── Controle de versão ────────────────────────────────────────
+.git/
+.gitignore
+
+
+# ── Variáveis de ambiente (segurança) ─────────────────────────
+.env
+.env.*
+!.env.example
+
+
+# ── Imagens e assets binários ─────────────────────────────────
+# Claude não precisa "ler" imagens — só referenciar os caminhos
+public/images/*.jpg
+public/images/*.jpeg
+public/images/*.png
+public/images/*.webp
+public/images/*.avif
+public/images/equipe/
+
+
+# ── Fontes ────────────────────────────────────────────────────
+public/fonts/
+assets/fonts/
+
+
+# ── Gerado automaticamente ────────────────────────────────────
+# Esses arquivos são gerados pelo Nuxt/NuxtUI — não editar manualmente
+app/router.options.ts
+.nuxt/types/
