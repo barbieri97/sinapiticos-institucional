@@ -25,7 +25,7 @@ if (recursoData.category === 'link' && recursoData.externalUrl) {
 }
 
 useHead({
-  title: `${recursoData.title} — sinapíticos`,
+  title: `${recursoData.title} — sinapiticos`,
   meta: [
     { name: 'description', content: recursoData.description },
   ],

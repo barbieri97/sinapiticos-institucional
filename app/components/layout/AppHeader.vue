@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
+import type { NavigationMenuItem } from "@nuxt/ui";
 
 const navItems: NavigationMenuItem[] = [
-  { label: 'Home', to: '/' },
-  { label: 'Sobre', to: '/sobre' },
-  { label: 'Serviços', to: '/servicos' },
-  { label: 'Equipe', to: '/equipe' },
-  { label: 'Ação Social', to: '/acao-social' },
-  { label: 'Recursos', to: '/recursos' },
-  { label: 'Contato', to: '/contato' },
-]
+  { label: "Home", to: "/" },
+  { label: "Sobre", to: "/sobre" },
+  { label: "Serviços", to: "/servicos" },
+  { label: "Equipe", to: "/equipe" },
+  { label: "Ação Social", to: "/acao-social" },
+  { label: "Recursos", to: "/recursos" },
+  { label: "Contato", to: "/contato" },
+];
 </script>
 
 <template>
@@ -19,12 +19,22 @@ const navItems: NavigationMenuItem[] = [
   >
     <!-- Logo -->
     <template #title>
-      <NuxtLink to="/" class="flex items-center gap-2 shrink-0">
-        <NeuronDeco class="w-8 h-8" />
-        <div class="flex flex-col leading-none">
-          <span class="font-display font-black text-primary-600 text-lg tracking-tight">sinapíticos</span>
-          <span class="font-sans text-zinc-500 text-[10px] uppercase tracking-widest hidden sm:block">instituto de desenvolvimento infantil</span>
-        </div>
+      <NuxtLink
+        to="/"
+        class="flex items-center shrink-0"
+      >
+        <NuxtImg
+          src="/images/logo-sem-fundo.png"
+          alt="sinapiticos: instituto de desenvolvimento infantil"
+          loading="eager"
+          fetchpriority="high"
+          width="160"
+          height="48"
+          sizes="sm:120px md:140px lg:160px"
+          format="webp"
+          quality="80"
+          class="h-12 lg:h-16 w-auto"
+        />
       </NuxtLink>
     </template>
 
@@ -40,12 +50,7 @@ const navItems: NavigationMenuItem[] = [
 
     <!-- CTA direita -->
     <template #right>
-      <UButton
-        to="/contato"
-        color="primary"
-        size="sm"
-        class="hidden lg:flex"
-      >
+      <UButton to="/contato" color="primary" size="sm" class="hidden lg:flex">
         Agendar consulta
       </UButton>
     </template>
@@ -63,12 +68,7 @@ const navItems: NavigationMenuItem[] = [
         }"
       />
       <div class="pt-4 mt-4 border-t border-primary-100">
-        <UButton
-          to="/contato"
-          color="primary"
-          size="lg"
-          block
-        >
+        <UButton to="/contato" color="primary" size="lg" block>
           Agendar consulta
         </UButton>
       </div>

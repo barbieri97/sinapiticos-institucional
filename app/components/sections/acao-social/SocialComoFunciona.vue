@@ -18,7 +18,7 @@ const etapas = [
   {
     numero: '04',
     titulo: 'Início do acompanhamento',
-    descricao: 'Se elegível para a vaga social, o atendimento começa com o mesmo rigor e cuidado de todos os atendimentos do sinapíticos.',
+    descricao: 'Se elegível para a vaga social, o atendimento começa com o mesmo rigor e cuidado de todos os atendimentos do sinapiticos.',
   },
 ]
 </script>

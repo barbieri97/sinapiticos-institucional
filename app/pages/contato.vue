@@ -1,10 +1,10 @@
 <script setup lang="ts">
 useHead({
-  title: 'Contato e agendamento — sinapíticos',
+  title: 'Contato e agendamento — sinapiticos',
   meta: [
     {
       name: 'description',
-      content: 'Entre em contato com o sinapíticos para agendar uma avaliação ou tirar dúvidas sobre nossos serviços.'
+      content: 'Entre em contato com o sinapiticos para agendar uma avaliação ou tirar dúvidas sobre nossos serviços.'
     }
   ]
 })

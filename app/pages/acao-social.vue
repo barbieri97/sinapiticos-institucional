@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Ação Social — sinapíticos',
+  title: 'Ação Social — sinapiticos',
   meta: [
     {
       name: 'description',

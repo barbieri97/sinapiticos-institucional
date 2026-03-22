@@ -130,7 +130,7 @@ async function onSubmit() {
           e-mail.
         </p>
         <p class="font-sans text-zinc-500 text-sm">
-          Obrigado por confiar no sinapíticos. Cuidaremos bem da sua
+          Obrigado por confiar no sinapiticos. Cuidaremos bem da sua
           solicitação.
         </p>
       </div>
@@ -282,7 +282,7 @@ async function onSubmit() {
               </div>
 
               <UFormField
-                label="Como ficou sabendo do sinapíticos?"
+                label="Como ficou sabendo do sinapiticos?"
                 name="comoSoube"
               >
                 <USelect

@@ -25,7 +25,7 @@ const pilares = [
         <EyebrowBadge text="✦ Nossa visão" />
         <SectionTitle title="Acesso vai além do preço" class="mt-4" />
         <p class="font-sans text-zinc-600 text-lg leading-relaxed mt-5">
-          André e Carolina fundaram o sinapíticos com uma certeza: o que impede famílias de baixa renda de acessar cuidado especializado não é apenas o custo — é também a falta de informação sobre os direitos que já existem, e a ausência de quem as acompanhe nesse caminho.
+          André e Carolina fundaram o sinapiticos com uma certeza: o que impede famílias de baixa renda de acessar cuidado especializado não é apenas o custo — é também a falta de informação sobre os direitos que já existem, e a ausência de quem as acompanhe nesse caminho.
         </p>
         <p class="font-sans text-zinc-600 text-lg leading-relaxed mt-3">
           Por isso, nossa ação social tem três pilares.

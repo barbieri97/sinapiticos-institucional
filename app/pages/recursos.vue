@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: "Recursos gratuitos — sinapíticos",
+  title: "Recursos gratuitos — sinapiticos",
   meta: [
     {
       name: "description",
@@ -141,7 +141,7 @@ function recursoLink(recurso: Recurso): string {
           class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10"
         >
           <div>
-            <EyebrowBadge text="✦ Dentro do sinapíticos" />
+            <EyebrowBadge text="✦ Dentro do sinapiticos" />
             <SectionTitle title="Ferramentas interativas" class="mt-4" />
             <p class="font-sans text-zinc-500 mt-3 max-w-xl">
               Ferramentas desenvolvidas por nós para facilitar o seu dia a dia —

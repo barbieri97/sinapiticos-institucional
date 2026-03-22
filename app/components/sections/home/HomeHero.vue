@@ -14,7 +14,7 @@
           </h1>
 
           <p class="font-sans text-zinc-600 text-lg leading-relaxed max-w-xl">
-            O sinapíticos é um instituto de desenvolvimento infantil onde rigor científico e cuidado humano caminham juntos — porque sua família merece os dois.
+            O sinapiticos é um instituto de desenvolvimento infantil onde rigor científico e cuidado humano caminham juntos — porque sua família merece os dois.
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4 pt-2">
@@ -39,9 +39,20 @@
           </div>
         </div>
 
-        <!-- Neurônio decorativo -->
+        <!-- Logo -->
         <div class="flex items-center justify-center">
-          <NeuronDeco class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 drop-shadow-xl" />
+          <NuxtImg
+            src="/images/logo-sem-fundo.png"
+            alt="sinapiticos: instituto de desenvolvimento infantil"
+            loading="eager"
+            fetchpriority="high"
+            width="600"
+            height="600"
+            sizes="sm:320px md:400px lg:500px"
+            format="webp"
+            quality="90"
+            class="w-72 sm:w-96 lg:w-[500px] drop-shadow-xl object-contain"
+          />
         </div>
       </div>
     </div>

@@ -48,12 +48,21 @@ const columns: FooterColumn[] = [
           <!-- Brand block -->
           <template #left>
             <div class="flex flex-col gap-3">
-              <div class="flex items-center gap-2">
-                <NeuronDeco class="w-8 h-8 opacity-90" />
-                <div class="flex flex-col leading-none">
-                  <span class="font-display font-black text-white text-lg">sinapíticos</span>
-                  <span class="font-sans text-primary-200 text-[10px] uppercase tracking-widest">instituto de desenvolvimento infantil</span>
+              <div class="flex flex-col gap-2">
+                <div class="bg-cream rounded-xl p-2 inline-flex w-fit">
+                  <NuxtImg
+                    src="/images/logo-sem-fundo.png"
+                    alt="sinapiticos: instituto de desenvolvimento infantil"
+                    loading="lazy"
+                    width="64"
+                    height="64"
+                    sizes="64px"
+                    format="webp"
+                    quality="85"
+                    class="w-14 object-contain"
+                  />
                 </div>
+                <span class="font-sans text-primary-200 text-[10px] uppercase tracking-widest">instituto de desenvolvimento infantil</span>
               </div>
               <p class="font-sans text-primary-200 text-sm leading-relaxed max-w-xs">
                 Rigor científico e cuidado humano no desenvolvimento de cada pitico.
@@ -67,7 +76,7 @@ const columns: FooterColumn[] = [
     <!-- Copyright -->
     <template #left>
       <p class="font-sans text-primary-400 text-xs">
-        © {{ new Date().getFullYear() }} sinapíticos — instituto de desenvolvimento infantil.
+        © {{ new Date().getFullYear() }} sinapiticos — instituto de desenvolvimento infantil.
         Fundado por André Barbieri &amp; Carolina Teixeira.
       </p>
     </template>

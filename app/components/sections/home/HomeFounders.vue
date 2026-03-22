@@ -13,7 +13,7 @@
             André Barbieri e Carolina Teixeira são neuropsicólogos infantis — e parceiros. Juntos, perceberam que o modelo de atendimento que queriam oferecer ainda não existia: um lugar onde o rigor científico fosse tão presente quanto o carinho com cada criança.
           </p>
           <p class="font-sans text-zinc-600 leading-relaxed">
-            Assim nasceu o sinapíticos — um nome que brinca com "sinápticos", as conexões do cérebro, e com "piticos", o jeito carinhoso de se referir aos pequenos.
+            Assim nasceu o sinapiticos — um nome que brinca com "sinápticos", as conexões do cérebro, e com "piticos", o jeito carinhoso de se referir aos pequenos.
           </p>
           <div class="flex flex-col sm:flex-row gap-3 pt-2">
             <UButton to="/sobre" color="primary" variant="outline" size="md">

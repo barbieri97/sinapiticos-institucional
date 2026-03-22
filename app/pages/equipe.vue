@@ -1,10 +1,10 @@
 <script setup lang="ts">
 useHead({
-  title: 'Nossa equipe — sinapíticos',
+  title: 'Nossa equipe — sinapiticos',
   meta: [
     {
       name: 'description',
-      content: 'Conheça André Barbieri e Carolina Teixeira, neuropsicólogos infantis e fundadores do sinapíticos.'
+      content: 'Conheça André Barbieri e Carolina Teixeira, neuropsicólogos infantis e fundadores do sinapiticos.'
     }
   ]
 })
@@ -49,7 +49,7 @@ useHead({
           <UIcon name="i-lucide-users-round" class="text-primary-400 text-4xl mb-4" />
           <h3 class="font-display font-extrabold text-primary-700 text-xl mb-2">Crescendo juntos</h3>
           <p class="font-sans text-zinc-500 leading-relaxed max-w-lg mx-auto">
-            A equipe do sinapíticos está em expansão. Buscamos sempre profissionais que compartilhem dos nossos valores — ciência com carinho.
+            A equipe do sinapiticos está em expansão. Buscamos sempre profissionais que compartilhem dos nossos valores — ciência com carinho.
           </p>
         </div>
       </div>

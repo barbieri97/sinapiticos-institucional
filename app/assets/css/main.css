@@ -2,34 +2,36 @@
 @import "@nuxt/ui";
 
 /* ─────────────────────────────────────────
-   TEMA SINAPÍTICOS
+   TEMA SINAPITICOS
    Paleta extraída do logotipo oficial.
 ───────────────────────────────────────── */
 
 @theme static {
   /* Fontes */
   --font-display: 'Nunito', sans-serif;
-  --font-sans:    'DM Sans', sans-serif;
+  --font-sans: 'DM Sans', sans-serif;
 
   /* Cor primária: Teal (azul-petróleo do "Sina" e do neurônio) */
-  --color-primary-50:  #f0f9fa;
+  --color-primary-50: #f0f9fa;
   --color-primary-100: #d9f0f3;
   --color-primary-200: #b3e1e7;
   --color-primary-300: #7ecad4;
   --color-primary-400: #45aab9;
-  --color-primary-500: #1A7A8A;  /* ← cor base do logo */
+  --color-primary-500: #1A7A8A;
+  /* ← cor base do logo */
   --color-primary-600: #125F6D;
   --color-primary-700: #0f4d59;
   --color-primary-800: #0d3f49;
   --color-primary-900: #0a333c;
 
   /* Cor secundária: Amber (laranja do "píticos") */
-  --color-secondary-50:  #fff9ed;
+  --color-secondary-50: #fff9ed;
   --color-secondary-100: #fef3dc;
   --color-secondary-200: #fde4a8;
   --color-secondary-300: #fccf6a;
   --color-secondary-400: #fab432;
-  --color-secondary-500: #E8A020;  /* ← cor base do logo */
+  --color-secondary-500: #E8A020;
+  /* ← cor base do logo */
   --color-secondary-600: #c47d0e;
   --color-secondary-700: #9d600a;
   --color-secondary-800: #7d4c0c;
@@ -39,9 +41,9 @@
   --color-cream: #F5F0E8;
 
   /* Border radius padrão */
-  --radius-card:   1rem;
-  --radius-btn:    0.5rem;
-  --radius-badge:  2rem;
+  --radius-card: 1rem;
+  --radius-btn: 0.5rem;
+  --radius-badge: 2rem;
 }
 
 /* ─────────────────────────────────────────
@@ -49,9 +51,9 @@
    Mapeamos primary → teal, secondary → amber
 ───────────────────────────────────────── */
 :root {
-  --ui-primary:   var(--color-primary-500);
+  --ui-primary: var(--color-primary-500);
   --ui-secondary: var(--color-secondary-500);
-  --ui-radius:    0.5rem;
+  --ui-radius: 0.5rem;
   color-scheme: light;
 }
 
@@ -64,7 +66,12 @@ body {
   color: #2C2C2C;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   font-weight: 800;
 }

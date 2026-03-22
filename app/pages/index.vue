@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'sinapíticos — Instituto de Desenvolvimento Infantil',
+  title: 'sinapiticos — Instituto de Desenvolvimento Infantil',
   meta: [
     {
       name: 'description',
@@ -16,6 +16,7 @@ useHead({
     <HomePurpose />
     <HomeServices />
     <HomeFounders />
+    <HomeMascots />
     <HomeSocialAction />
     <HomeResources />
     <HomeCTA />
