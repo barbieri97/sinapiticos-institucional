@@ -1,9 +1,9 @@
-import { defineContentConfig, defineCollection, z } from "@nuxt/content";
+import { defineContentConfig, defineCollection, z } from '@nuxt/content'
 
 export default defineContentConfig({
   collections: {
     blog: defineCollection({
-      type: "page",
+      type: 'page',
       source: 'blog/*.md',
       schema: z.object({
         title: z.string(),
@@ -11,8 +11,8 @@ export default defineContentConfig({
         category: z.string(),
         date: z.string(),
         icon: z.string().optional(),
-        externalUrl: z.string().optional(),
-      }),
-    }),
-  },
-});
+        externalUrl: z.string().optional()
+      })
+    })
+  }
+})

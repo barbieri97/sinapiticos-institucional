@@ -13,7 +13,10 @@ useHead({
 <template>
   <main>
     <!-- Hero -->
-    <section class="bg-[#F5F0E8] py-20 px-4 sm:px-6 lg:px-8" aria-label="Nossa equipe">
+    <section
+      class="bg-cream py-20 px-4 sm:px-6 lg:px-8"
+      aria-label="Nossa equipe"
+    >
       <div class="max-w-4xl mx-auto text-center flex flex-col items-center gap-5">
         <EyebrowBadge text="✦ Quem cuida dos seus piticos" />
         <h1 class="font-display font-black text-4xl sm:text-5xl text-primary-800 leading-tight">
@@ -26,7 +29,10 @@ useHead({
     </section>
 
     <!-- Equipe -->
-    <section class="bg-white py-20 px-4 sm:px-6 lg:px-8" aria-label="Membros da equipe">
+    <section
+      class="bg-white py-20 px-4 sm:px-6 lg:px-8"
+      aria-label="Membros da equipe"
+    >
       <div class="max-w-4xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <MembroCard
@@ -46,8 +52,13 @@ useHead({
         </div>
 
         <div class="mt-16 bg-primary-50 rounded-2xl p-8 text-center">
-          <UIcon name="i-lucide-users-round" class="text-primary-400 text-4xl mb-4" />
-          <h3 class="font-display font-extrabold text-primary-700 text-xl mb-2">Crescendo juntos</h3>
+          <UIcon
+            name="i-lucide-users-round"
+            class="text-primary-400 text-4xl mb-4"
+          />
+          <h3 class="font-display font-extrabold text-primary-700 text-xl mb-2">
+            Crescendo juntos
+          </h3>
           <p class="font-sans text-zinc-500 leading-relaxed max-w-lg mx-auto">
             A equipe do sinapiticos está em expansão. Buscamos sempre profissionais que compartilhem dos nossos valores — ciência com carinho.
           </p>

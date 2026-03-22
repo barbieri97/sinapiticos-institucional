@@ -11,7 +11,7 @@
       <h1
         class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-tight"
       >
-        Toda criança merece<br />
+        Toda criança merece<br>
         <span class="text-secondary-300">cuidado de qualidade</span>
       </h1>
 

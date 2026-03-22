@@ -38,14 +38,21 @@ defineProps<{
 
       <!-- Info -->
       <div class="flex flex-col gap-1">
-        <h3 class="font-display font-extrabold text-xl" :class="color === 'secondary' ? 'text-secondary-700' : 'text-primary-700'">
+        <h3
+          class="font-display font-extrabold text-xl"
+          :class="color === 'secondary' ? 'text-secondary-700' : 'text-primary-700'"
+        >
           {{ nome }}
         </h3>
-        <p class="font-display font-bold text-sm text-zinc-500 uppercase tracking-widest">{{ cargo }}</p>
+        <p class="font-display font-bold text-sm text-zinc-500 uppercase tracking-widest">
+          {{ cargo }}
+        </p>
       </div>
 
       <!-- Formação -->
-      <p class="font-sans text-sm text-zinc-500 leading-relaxed">{{ formacao }}</p>
+      <p class="font-sans text-sm text-zinc-500 leading-relaxed">
+        {{ formacao }}
+      </p>
 
       <!-- Frase pessoal -->
       <blockquote class="border-l-4 border-secondary-400 pl-4 text-left">

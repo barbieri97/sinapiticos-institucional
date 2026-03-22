@@ -2,7 +2,10 @@
 </script>
 
 <template>
-  <section class="bg-[#F5F0E8] py-20 px-4 sm:px-6 lg:px-8" aria-label="Nossa origem">
+  <section
+    class="bg-cream py-20 px-4 sm:px-6 lg:px-8"
+    aria-label="Nossa origem"
+  >
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <div class="flex flex-col gap-6">
@@ -20,10 +23,22 @@
             </p>
           </div>
           <div class="flex flex-col sm:flex-row gap-3 pt-2">
-            <UButton to="/equipe" color="primary" variant="solid" size="md" icon="i-lucide-users">
+            <UButton
+              to="/equipe"
+              color="primary"
+              variant="solid"
+              size="md"
+              icon="i-lucide-users"
+            >
               Conheça a equipe
             </UButton>
-            <UButton to="/contato" color="primary" variant="outline" size="md" icon="i-lucide-calendar">
+            <UButton
+              to="/contato"
+              color="primary"
+              variant="outline"
+              size="md"
+              icon="i-lucide-calendar"
+            >
               Agendar consulta
             </UButton>
           </div>
@@ -32,20 +47,35 @@
         <!-- Visual -->
         <div class="flex flex-col gap-4">
           <div class="bg-primary-500 rounded-2xl p-8 text-white">
-            <UIcon name="i-lucide-quote" class="text-primary-200 text-4xl mb-4" />
+            <UIcon
+              name="i-lucide-quote"
+              class="text-primary-200 text-4xl mb-4"
+            />
             <p class="font-sans font-medium italic text-lg leading-relaxed text-primary-50">
               "Ciência e afeto não são opostos: são a mesma coisa."
             </p>
-            <p class="font-display font-bold text-primary-200 text-sm mt-4">— André & Carolina, fundadores</p>
+            <p class="font-display font-bold text-primary-200 text-sm mt-4">
+              — André & Carolina, fundadores
+            </p>
           </div>
           <div class="grid grid-cols-2 gap-4">
             <div class="bg-white rounded-2xl p-5 flex flex-col items-center text-center gap-2">
-              <UIcon name="i-lucide-brain" class="text-primary-500 text-2xl" />
-              <p class="font-display font-bold text-primary-700 text-sm">Rigor científico</p>
+              <UIcon
+                name="i-lucide-brain"
+                class="text-primary-500 text-2xl"
+              />
+              <p class="font-display font-bold text-primary-700 text-sm">
+                Rigor científico
+              </p>
             </div>
             <div class="bg-white rounded-2xl p-5 flex flex-col items-center text-center gap-2">
-              <UIcon name="i-lucide-heart" class="text-secondary-500 text-2xl" />
-              <p class="font-display font-bold text-secondary-700 text-sm">Cuidado humano</p>
+              <UIcon
+                name="i-lucide-heart"
+                class="text-secondary-500 text-2xl"
+              />
+              <p class="font-display font-bold text-secondary-700 text-sm">
+                Cuidado humano
+              </p>
             </div>
           </div>
         </div>

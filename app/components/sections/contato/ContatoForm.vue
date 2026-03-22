@@ -1,66 +1,66 @@
 <script setup lang="ts">
-import * as v from "valibot";
+import * as v from 'valibot'
 
 const schema = v.object({
   name: v.pipe(
     v.string(),
-    v.minLength(2, "Nome deve ter pelo menos 2 caracteres"),
+    v.minLength(2, 'Nome deve ter pelo menos 2 caracteres')
   ),
-  email: v.pipe(v.string(), v.email("E-mail inválido")),
+  email: v.pipe(v.string(), v.email('E-mail inválido')),
   phone: v.optional(v.string()),
-  subject: v.pipe(v.string(), v.minLength(1, "Selecione um assunto")),
+  subject: v.pipe(v.string(), v.minLength(1, 'Selecione um assunto')),
   message: v.pipe(
     v.string(),
-    v.minLength(10, "Mensagem deve ter pelo menos 10 caracteres"),
-  ),
-});
+    v.minLength(10, 'Mensagem deve ter pelo menos 10 caracteres')
+  )
+})
 
-type Schema = v.InferOutput<typeof schema>;
+type Schema = v.InferOutput<typeof schema>
 
 const state = reactive<Partial<Schema>>({
-  name: "",
-  email: "",
-  phone: "",
-  subject: "",
-  message: "",
-});
+  name: '',
+  email: '',
+  phone: '',
+  subject: '',
+  message: ''
+})
 
 const subjects = [
-  { label: "Agendamento", value: "Agendamento" },
-  { label: "Dúvidas", value: "Dúvidas" },
-  { label: "Encaminhamento médico", value: "Encaminhamento médico" },
-  { label: "Ação Social", value: "Ação Social" },
-  { label: "Outros", value: "Outros" },
-];
+  { label: 'Agendamento', value: 'Agendamento' },
+  { label: 'Dúvidas', value: 'Dúvidas' },
+  { label: 'Encaminhamento médico', value: 'Encaminhamento médico' },
+  { label: 'Ação Social', value: 'Ação Social' },
+  { label: 'Outros', value: 'Outros' }
+]
 
-const sent = ref(false);
-const sending = ref(false);
-const error = ref("");
+const sent = ref(false)
+const sending = ref(false)
+const error = ref('')
 
 async function onSubmit() {
-  sending.value = true;
-  error.value = "";
+  sending.value = true
+  error.value = ''
   try {
     // Integração Formspree — substitua YOUR_FORM_ID pelo ID do Formspree
     const { formspreeUrl } = useSiteContact()
     const res = await fetch(formspreeUrl, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
       },
-      body: JSON.stringify(state),
-    });
+      body: JSON.stringify(state)
+    })
     if (res.ok) {
-      sent.value = true;
+      sent.value = true
     } else {
-      error.value =
-        "Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.";
+      error.value
+        = 'Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.'
     }
   } catch {
-    error.value = "Erro de conexão. Tente novamente.";
+    error.value = 'Erro de conexão. Tente novamente.'
   } finally {
-    sending.value = false;
+    sending.value = false
   }
 }
 </script>
@@ -79,7 +79,10 @@ async function onSubmit() {
       v-if="sent"
       class="bg-primary-50 border border-primary-200 rounded-2xl p-8 text-center flex flex-col items-center gap-4"
     >
-      <UIcon name="i-lucide-check-circle" class="text-primary-500 text-4xl" />
+      <UIcon
+        name="i-lucide-check-circle"
+        class="text-primary-500 text-4xl"
+      />
       <h3 class="font-display font-extrabold text-primary-700 text-xl">
         Mensagem enviada!
       </h3>
@@ -96,7 +99,11 @@ async function onSubmit() {
       class="flex flex-col gap-4"
       @submit="onSubmit"
     >
-      <UFormField label="Nome completo" name="name" required>
+      <UFormField
+        label="Nome completo"
+        name="name"
+        required
+      >
         <UInput
           v-model="state.name"
           placeholder="Seu nome completo"
@@ -107,7 +114,11 @@ async function onSubmit() {
       </UFormField>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <UFormField label="E-mail" name="email" required>
+        <UFormField
+          label="E-mail"
+          name="email"
+          required
+        >
           <UInput
             v-model="state.email"
             type="email"
@@ -118,7 +129,10 @@ async function onSubmit() {
           />
         </UFormField>
 
-        <UFormField label="Telefone / WhatsApp" name="phone">
+        <UFormField
+          label="Telefone / WhatsApp"
+          name="phone"
+        >
           <UInput
             v-model="state.phone"
             type="tel"
@@ -130,7 +144,11 @@ async function onSubmit() {
         </UFormField>
       </div>
 
-      <UFormField label="Assunto" name="subject" required>
+      <UFormField
+        label="Assunto"
+        name="subject"
+        required
+      >
         <USelect
           v-model="state.subject"
           :items="subjects"
@@ -142,7 +160,11 @@ async function onSubmit() {
         />
       </UFormField>
 
-      <UFormField label="Mensagem" name="message" required>
+      <UFormField
+        label="Mensagem"
+        name="message"
+        required
+      >
         <UTextarea
           v-model="state.message"
           placeholder="Conte-nos como podemos ajudar..."

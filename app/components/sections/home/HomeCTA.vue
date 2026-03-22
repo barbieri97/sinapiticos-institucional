@@ -3,7 +3,10 @@ const contact = useSiteContact()
 </script>
 
 <template>
-  <section class="bg-white py-20 px-4 sm:px-6 lg:px-8" aria-label="Entre em contato">
+  <section
+    class="bg-white py-20 px-4 sm:px-6 lg:px-8"
+    aria-label="Entre em contato"
+  >
     <div class="max-w-3xl mx-auto text-center flex flex-col items-center gap-6">
       <EyebrowBadge text="✦ Estamos aqui" />
 

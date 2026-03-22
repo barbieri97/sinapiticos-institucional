@@ -1,22 +1,22 @@
 <script setup lang="ts">
 useHead({
   title:
-    "Serviços — Avaliação, Psicoterapia e Orientação Parental — sinapiticos",
+    'Serviços — Avaliação, Psicoterapia e Orientação Parental — sinapiticos',
   meta: [
     {
-      name: "description",
+      name: 'description',
       content:
-        "Avaliação neuropsicológica, psicoterapia infantil e orientação parental. Conheça os serviços do sinapiticos.",
-    },
-  ],
-});
+        'Avaliação neuropsicológica, psicoterapia infantil e orientação parental. Conheça os serviços do sinapiticos.'
+    }
+  ]
+})
 </script>
 
 <template>
   <main>
     <!-- Hero -->
     <section
-      class="bg-[#F5F0E8] py-20 px-4 sm:px-6 lg:px-8"
+      class="bg-cream py-20 px-4 sm:px-6 lg:px-8"
       aria-label="Serviços"
     >
       <div class="max-w-5xl mx-auto">
@@ -29,7 +29,7 @@ useHead({
             <h1
               class="font-display font-black text-4xl sm:text-5xl text-primary-800 leading-tight"
             >
-              Serviços pensados para<br />cada fase do desenvolvimento
+              Serviços pensados para<br>cada fase do desenvolvimento
             </h1>
             <p class="font-sans text-zinc-600 text-lg leading-relaxed max-w-lg">
               Trabalhamos com abordagens baseadas em evidências, respeitando a

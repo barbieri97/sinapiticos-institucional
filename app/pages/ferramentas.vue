@@ -7,9 +7,9 @@ useHead({
     {
       name: 'description',
       content:
-        'Ferramentas desenvolvidas pelo sinapiticos para facilitar o dia a dia de famílias, educadores e profissionais — gratuitas e sem cadastro.',
-    },
-  ],
+        'Ferramentas desenvolvidas pelo sinapiticos para facilitar o dia a dia de famílias, educadores e profissionais — gratuitas e sem cadastro.'
+    }
+  ]
 })
 
 const ferramentas = useFerramentas()
@@ -29,7 +29,7 @@ const ferramentas = useFerramentas()
         <h1
           class="font-display font-black text-4xl sm:text-5xl text-white leading-tight"
         >
-          Ferramentas interativas<br />
+          Ferramentas interativas<br>
           <span class="text-secondary-300">para o seu dia a dia</span>
         </h1>
         <p class="font-sans text-primary-100 text-lg leading-relaxed max-w-2xl">
@@ -41,7 +41,7 @@ const ferramentas = useFerramentas()
 
     <!-- Grid de ferramentas -->
     <section
-      class="bg-[#F5F0E8] py-20 px-4 sm:px-6 lg:px-8"
+      class="bg-cream py-20 px-4 sm:px-6 lg:px-8"
       aria-label="Lista de ferramentas"
     >
       <div class="max-w-7xl mx-auto">

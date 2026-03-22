@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from "@nuxt/ui";
+import type { NavigationMenuItem } from '@nuxt/ui'
 
 const navItems: NavigationMenuItem[] = [
-  { label: "Home", to: "/" },
-  { label: "Sobre", to: "/sobre" },
-  { label: "Serviços", to: "/servicos" },
-  { label: "Equipe", to: "/equipe" },
-  { label: "Ação Social", to: "/acao-social" },
-  { label: "Blog", to: "/blog" },
-  { label: "Ferramentas", to: "/ferramentas" },
-  { label: "Contato", to: "/contato" },
-];
+  { label: 'Home', to: '/' },
+  { label: 'Sobre', to: '/sobre' },
+  { label: 'Serviços', to: '/servicos' },
+  { label: 'Equipe', to: '/equipe' },
+  { label: 'Ação Social', to: '/acao-social' },
+  { label: 'Blog', to: '/blog' },
+  { label: 'Ferramentas', to: '/ferramentas' },
+  { label: 'Contato', to: '/contato' }
+]
 </script>
 
 <template>
@@ -45,13 +45,18 @@ const navItems: NavigationMenuItem[] = [
       variant="link"
       :ui="{
         link: 'font-display font-bold text-sm text-zinc-600 hover:text-primary-600',
-        linkActive: 'text-primary-600',
+        linkActive: 'text-primary-600'
       }"
     />
 
     <!-- CTA direita -->
     <template #right>
-      <UButton to="/contato" color="primary" size="sm" class="hidden lg:flex">
+      <UButton
+        to="/contato"
+        color="primary"
+        size="sm"
+        class="hidden lg:flex"
+      >
         Agendar consulta
       </UButton>
     </template>
@@ -65,11 +70,16 @@ const navItems: NavigationMenuItem[] = [
         class="-mx-2.5"
         :ui="{
           link: 'font-display font-bold text-base text-zinc-700 hover:text-primary-600',
-          linkActive: 'text-primary-600',
+          linkActive: 'text-primary-600'
         }"
       />
       <div class="pt-4 mt-4 border-t border-primary-100">
-        <UButton to="/contato" color="primary" size="lg" block>
+        <UButton
+          to="/contato"
+          color="primary"
+          size="lg"
+          block
+        >
           Agendar consulta
         </UButton>
       </div>

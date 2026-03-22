@@ -2,7 +2,10 @@
 </script>
 
 <template>
-  <section class="bg-primary-500 py-20 px-4 sm:px-6 lg:px-8" aria-label="Ação social">
+  <section
+    class="bg-primary-500 py-20 px-4 sm:px-6 lg:px-8"
+    aria-label="Ação social"
+  >
     <div class="max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
       <EyebrowBadge text="✦ Acesso como direito" />
 

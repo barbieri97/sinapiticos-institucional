@@ -1,90 +1,90 @@
 <script setup lang="ts">
-import * as v from "valibot";
+import * as v from 'valibot'
 
 const schema = v.object({
   nomeResponsavel: v.pipe(
     v.string(),
-    v.minLength(2, "Nome deve ter pelo menos 2 caracteres"),
+    v.minLength(2, 'Nome deve ter pelo menos 2 caracteres')
   ),
   nomeCrianca: v.pipe(
     v.string(),
-    v.minLength(2, "Nome deve ter pelo menos 2 caracteres"),
+    v.minLength(2, 'Nome deve ter pelo menos 2 caracteres')
   ),
   idadeCrianca: v.pipe(
     v.string(),
-    v.minLength(1, "Informe a idade da criança"),
+    v.minLength(1, 'Informe a idade da criança')
   ),
-  whatsapp: v.pipe(v.string(), v.minLength(10, "Informe um telefone válido")),
-  email: v.optional(v.pipe(v.string(), v.email("E-mail inválido"))),
+  whatsapp: v.pipe(v.string(), v.minLength(10, 'Informe um telefone válido')),
+  email: v.optional(v.pipe(v.string(), v.email('E-mail inválido'))),
   rendaFamiliar: v.pipe(
     v.string(),
-    v.minLength(1, "Selecione a faixa de renda"),
+    v.minLength(1, 'Selecione a faixa de renda')
   ),
   pessoasNaFamilia: v.optional(v.string()),
   descricao: v.pipe(
     v.string(),
-    v.minLength(20, "Por favor, descreva um pouco mais a situação"),
+    v.minLength(20, 'Por favor, descreva um pouco mais a situação')
   ),
-  comoSoube: v.optional(v.string()),
-});
+  comoSoube: v.optional(v.string())
+})
 
-type Schema = v.InferOutput<typeof schema>;
+type Schema = v.InferOutput<typeof schema>
 
 const state = reactive<Partial<Schema>>({
-  nomeResponsavel: "",
-  nomeCrianca: "",
-  idadeCrianca: "",
-  whatsapp: "",
-  email: "",
-  rendaFamiliar: "",
-  pessoasNaFamilia: "",
-  descricao: "",
-  comoSoube: "",
-});
+  nomeResponsavel: '',
+  nomeCrianca: '',
+  idadeCrianca: '',
+  whatsapp: '',
+  email: '',
+  rendaFamiliar: '',
+  pessoasNaFamilia: '',
+  descricao: '',
+  comoSoube: ''
+})
 
 const faixasRenda = [
-  { label: "Até 1 salário mínimo", value: "Até 1 SM" },
-  { label: "De 1 a 2 salários mínimos", value: "1 a 2 SM" },
-  { label: "De 2 a 3 salários mínimos", value: "2 a 3 SM" },
-  { label: "Prefiro não informar agora", value: "Não informado" },
-];
+  { label: 'Até 1 salário mínimo', value: 'Até 1 SM' },
+  { label: 'De 1 a 2 salários mínimos', value: '1 a 2 SM' },
+  { label: 'De 2 a 3 salários mínimos', value: '2 a 3 SM' },
+  { label: 'Prefiro não informar agora', value: 'Não informado' }
+]
 
 const comoSoubeoOptions = [
-  { label: "Indicação médica / pediatra", value: "Indicação médica" },
-  { label: "Indicação de escola ou professor", value: "Indicação escolar" },
-  { label: "Redes sociais", value: "Redes sociais" },
-  { label: "Indicação de amigo ou familiar", value: "Indicação pessoal" },
-  { label: "Busca na internet", value: "Internet" },
-  { label: "Outro", value: "Outro" },
-];
+  { label: 'Indicação médica / pediatra', value: 'Indicação médica' },
+  { label: 'Indicação de escola ou professor', value: 'Indicação escolar' },
+  { label: 'Redes sociais', value: 'Redes sociais' },
+  { label: 'Indicação de amigo ou familiar', value: 'Indicação pessoal' },
+  { label: 'Busca na internet', value: 'Internet' },
+  { label: 'Outro', value: 'Outro' }
+]
 
-const sent = ref(false);
-const sending = ref(false);
-const error = ref("");
+const sent = ref(false)
+const sending = ref(false)
+const error = ref('')
 
 async function onSubmit() {
-  sending.value = true;
-  error.value = "";
+  sending.value = true
+  error.value = ''
   try {
     const { formspreeUrl } = useSiteContact()
     const res = await fetch(formspreeUrl, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
       },
-      body: JSON.stringify({ ...state, tipo: "Cadastro Ação Social" }),
-    });
+      body: JSON.stringify({ ...state, tipo: 'Cadastro Ação Social' })
+    })
     if (res.ok) {
-      sent.value = true;
+      sent.value = true
     } else {
-      error.value =
-        "Erro ao enviar o cadastro. Tente novamente ou entre em contato pelo WhatsApp.";
+      error.value
+        = 'Erro ao enviar o cadastro. Tente novamente ou entre em contato pelo WhatsApp.'
     }
   } catch {
-    error.value = "Erro de conexão. Verifique sua internet e tente novamente.";
+    error.value = 'Erro de conexão. Verifique sua internet e tente novamente.'
   } finally {
-    sending.value = false;
+    sending.value = false
   }
 }
 </script>
@@ -92,7 +92,7 @@ async function onSubmit() {
 <template>
   <section
     id="cadastro"
-    class="bg-[#F5F0E8] py-20 px-4 sm:px-6 lg:px-8"
+    class="bg-cream py-20 px-4 sm:px-6 lg:px-8"
     aria-label="Cadastro para ação social"
   >
     <div class="max-w-3xl mx-auto">
@@ -136,7 +136,10 @@ async function onSubmit() {
       </div>
 
       <!-- Formulário -->
-      <UCard v-else class="bg-white shadow-md">
+      <UCard
+        v-else
+        class="bg-white shadow-md"
+      >
         <UForm
           :schema="schema"
           :state="state"
@@ -166,7 +169,11 @@ async function onSubmit() {
               </UFormField>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <UFormField label="WhatsApp" name="whatsapp" required>
+                <UFormField
+                  label="WhatsApp"
+                  name="whatsapp"
+                  required
+                >
                   <UInput
                     v-model="state.whatsapp"
                     type="tel"
@@ -177,7 +184,10 @@ async function onSubmit() {
                   />
                 </UFormField>
 
-                <UFormField label="E-mail (opcional)" name="email">
+                <UFormField
+                  label="E-mail (opcional)"
+                  name="email"
+                >
                   <UInput
                     v-model="state.email"
                     type="email"
@@ -202,7 +212,11 @@ async function onSubmit() {
             </p>
             <div class="flex flex-col gap-4">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <UFormField label="Nome da criança" name="nomeCrianca" required>
+                <UFormField
+                  label="Nome da criança"
+                  name="nomeCrianca"
+                  required
+                >
                   <UInput
                     v-model="state.nomeCrianca"
                     placeholder="Nome completo ou apelido"
@@ -270,7 +284,10 @@ async function onSubmit() {
                   />
                 </UFormField>
 
-                <UFormField label="Pessoas na família" name="pessoasNaFamilia">
+                <UFormField
+                  label="Pessoas na família"
+                  name="pessoasNaFamilia"
+                >
                   <UInput
                     v-model="state.pessoasNaFamilia"
                     placeholder="Ex: 4"

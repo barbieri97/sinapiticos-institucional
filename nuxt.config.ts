@@ -1,33 +1,32 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { readFileSync } from "node:fs";
+import { readFileSync } from 'node:fs'
 
-const { version } = JSON.parse(readFileSync("./package.json", "utf-8"));
+const { version } = JSON.parse(readFileSync('./package.json', 'utf-8'))
 
 export default defineNuxtConfig({
   modules: [
-    "@nuxt/eslint",
-    "@nuxt/ui",
-    "@nuxt/content",
-    "@nuxt/image",
-    "@nuxt/fonts",
-    "nuxt-studio",
+    '@nuxt/eslint',
+    '@nuxt/ui',
+    '@nuxt/content',
+    '@nuxt/image',
+    '@nuxt/fonts'
   ],
 
   components: [
     {
-      path: "~/components",
-      pathPrefix: false,
-    },
+      path: '~/components',
+      pathPrefix: false
+    }
   ],
   devtools: { enabled: true },
 
-  css: ["~/assets/css/main.css"],
+  css: ['~/assets/css/main.css'],
 
   // ── Tema: forçar light mode independente da preferência do sistema ──
   colorMode: {
-    preference: "light",
-    fallback: "light",
-    classSuffix: "",
+    preference: 'light',
+    fallback: 'light',
+    classSuffix: ''
   },
 
   runtimeConfig: {
@@ -37,74 +36,62 @@ export default defineNuxtConfig({
       whatsappDisplay: '',
       email: '',
       instagramHandle: '',
-      formspreeId: '',
-    },
+      formspreeId: ''
+    }
   },
 
   future: {
-    compatibilityVersion: 4,
+    compatibilityVersion: 4
   },
-  compatibilityDate: "2025-01-01",
+  compatibilityDate: '2025-01-01',
 
   // ── Deploy: Vercel (SSR) ─────────────────────────────────────────
   nitro: {
-    preset: "vercel",
+    preset: 'vercel'
   },
 
   vite: {
     optimizeDeps: {
-      include: ["reka-ui"],
-    },
+      include: ['reka-ui']
+    }
   },
 
   eslint: {
     config: {
       stylistic: {
-        commaDangle: "never",
-        braceStyle: "1tbs",
-      },
-    },
+        commaDangle: 'never',
+        braceStyle: '1tbs'
+      }
+    }
   },
 
   fonts: {
     families: [
       {
-        name: "Nunito",
-        provider: "google",
-        weights: [400, 600, 700, 800, 900],
+        name: 'Nunito',
+        provider: 'google',
+        weights: [400, 600, 700, 800, 900]
       },
       {
-        name: "DM Sans",
-        provider: "google",
+        name: 'DM Sans',
+        provider: 'google',
         weights: [400, 500],
-        styles: ["normal", "italic"],
-      },
-    ],
-  },
-
-  // ── Nuxt Studio — CMS visual auto-hospedado (/_studio) ──────────
-  // Auth via GitHub OAuth: cria um OAuth App em github.com/settings/developers
-  // Callback URL: https://[seu-dominio]/__nuxt_studio/auth/github
-  studio: {
-    auth: {
-      github: {
-        clientId: process.env.STUDIO_GITHUB_CLIENT_ID,
-        clientSecret: process.env.STUDIO_GITHUB_CLIENT_SECRET,
-      },
-    },
+        styles: ['normal', 'italic']
+      }
+    ]
   },
 
   // ── Imagens: provider Vercel ─────────────────────────────────────
   image: {
-    provider: "vercel",
+    provider: 'vercel',
     screens: {
-      sm: 640,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
-      "2xl": 1536,
+      'sm': 640,
+      'md': 768,
+      'lg': 1024,
+      'xl': 1280,
+      '2xl': 1536
     },
-    format: ["webp", "avif", "jpeg"],
-    quality: 80,
-  },
-});
+    format: ['webp', 'avif', 'jpeg'],
+    quality: 80
+  }
+})

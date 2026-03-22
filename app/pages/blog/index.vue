@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { useBlog } from "~/composables/useBlog";
+import { useBlog } from '~/composables/useBlog'
 
 useHead({
-  title: "Blog — sinapiticos",
+  title: 'Blog — sinapiticos',
   meta: [
     {
-      name: "description",
+      name: 'description',
       content:
-        "Artigos, guias e links úteis sobre neuropsicologia infantil, desenvolvimento e direitos das crianças — produzidos com cuidado pela nossa equipe.",
-    },
-  ],
-});
+        'Artigos, guias e links úteis sobre neuropsicologia infantil, desenvolvimento e direitos das crianças — produzidos com cuidado pela nossa equipe.'
+    }
+  ]
+})
 
 const {
   categorias,
@@ -18,8 +18,8 @@ const {
   postsFiltrados,
   labelCategoria,
   iconCategoria,
-  postLink,
-} = useBlog();
+  postLink
+} = useBlog()
 </script>
 
 <template>
@@ -36,7 +36,7 @@ const {
         <h1
           class="font-display font-black text-4xl sm:text-5xl text-white leading-tight"
         >
-          Conteúdo gratuito<br />
+          Conteúdo gratuito<br>
           <span class="text-secondary-300">para famílias e profissionais</span>
         </h1>
         <p class="font-sans text-primary-100 text-lg leading-relaxed max-w-2xl">
@@ -84,7 +84,10 @@ const {
           v-if="postsFiltrados.length > 0"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          <template v-for="post in postsFiltrados" :key="post.path">
+          <template
+            v-for="post in postsFiltrados"
+            :key="post.path"
+          >
             <!-- Link externo -->
             <a
               v-if="post.category === 'link' && post.externalUrl"
@@ -94,7 +97,7 @@ const {
               class="group"
             >
               <UCard
-                class="bg-[#F5F0E8] hover:-translate-y-1.5 transition-transform duration-200 hover:shadow-lg hover:shadow-primary-500/10 h-full border-l-4 border-secondary-400"
+                class="bg-cream hover:-translate-y-1.5 transition-transform duration-200 hover:shadow-lg hover:shadow-primary-500/10 h-full border-l-4 border-secondary-400"
               >
                 <div class="flex flex-col gap-3 h-full">
                   <div class="flex items-center gap-2">
@@ -139,9 +142,13 @@ const {
             </a>
 
             <!-- Link interno -->
-            <NuxtLink v-else :to="postLink(post)" class="group">
+            <NuxtLink
+              v-else
+              :to="postLink(post)"
+              class="group"
+            >
               <UCard
-                class="bg-[#F5F0E8] hover:-translate-y-1.5 transition-transform duration-200 hover:shadow-lg hover:shadow-primary-500/10 h-full border-l-4 border-secondary-400"
+                class="bg-cream hover:-translate-y-1.5 transition-transform duration-200 hover:shadow-lg hover:shadow-primary-500/10 h-full border-l-4 border-secondary-400"
               >
                 <div class="flex flex-col gap-3 h-full">
                   <div class="flex items-center gap-2">
@@ -188,7 +195,10 @@ const {
         </div>
 
         <!-- Estado vazio -->
-        <div v-else class="text-center py-16 flex flex-col items-center gap-4">
+        <div
+          v-else
+          class="text-center py-16 flex flex-col items-center gap-4"
+        >
           <div class="p-4 bg-primary-50 rounded-full">
             <UIcon
               name="i-lucide-library-big"

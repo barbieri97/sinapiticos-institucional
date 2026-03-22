@@ -13,7 +13,10 @@ useHead({
 <template>
   <main>
     <!-- Hero -->
-    <section class="bg-primary-600 py-20 px-4 sm:px-6 lg:px-8" aria-label="Sobre nós">
+    <section
+      class="bg-primary-600 py-20 px-4 sm:px-6 lg:px-8"
+      aria-label="Sobre nós"
+    >
       <div class="max-w-5xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <!-- Texto -->

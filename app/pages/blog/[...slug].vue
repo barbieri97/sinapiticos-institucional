@@ -11,7 +11,7 @@ const contentPath = `/blog/${slug}`
 const { data: post } = await useAsyncData(`blog-${contentPath}`, () =>
   (queryCollection as any)('blog')
     .where('path', '=', contentPath)
-    .first(),
+    .first()
 )
 
 if (!post.value) {
@@ -28,8 +28,8 @@ if (postData.category === 'link' && postData.externalUrl) {
 useHead({
   title: `${postData.title} — sinapiticos`,
   meta: [
-    { name: 'description', content: postData.description },
-  ],
+    { name: 'description', content: postData.description }
+  ]
 })
 
 const { labelCategoria } = useBlog()
@@ -44,7 +44,10 @@ const { labelCategoria } = useBlog()
           to="/blog"
           class="font-sans text-primary-200 hover:text-white text-sm transition-colors flex items-center gap-1 w-fit"
         >
-          <UIcon name="i-lucide-arrow-left" class="text-sm" />
+          <UIcon
+            name="i-lucide-arrow-left"
+            class="text-sm"
+          />
           Voltar ao blog
         </NuxtLink>
 
@@ -68,7 +71,7 @@ const { labelCategoria } = useBlog()
     </section>
 
     <!-- Conteúdo -->
-    <section class="bg-[#F5F0E8] py-16 px-4 sm:px-6 lg:px-8">
+    <section class="bg-cream py-16 px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto">
         <UCard class="bg-white">
           <div

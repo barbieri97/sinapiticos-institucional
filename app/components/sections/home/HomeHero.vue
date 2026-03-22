@@ -2,7 +2,10 @@
 </script>
 
 <template>
-  <section class="bg-[#F5F0E8] pt-16 pb-20 px-4 sm:px-6 lg:px-8" aria-label="Apresentação">
+  <section
+    class="bg-cream pt-16 pb-20 px-4 sm:px-6 lg:px-8"
+    aria-label="Apresentação"
+  >
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Text content -->
@@ -51,7 +54,7 @@
             sizes="sm:320px md:400px lg:500px"
             format="webp"
             quality="90"
-            class="w-72 sm:w-96 lg:w-[500px] drop-shadow-xl object-contain"
+            class="w-72 sm:w-96 lg:w-125 drop-shadow-xl object-contain"
           />
         </div>
       </div>

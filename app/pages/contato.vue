@@ -13,7 +13,10 @@ useHead({
 <template>
   <main>
     <!-- Hero -->
-    <section class="bg-primary-600 py-20 px-4 sm:px-6 lg:px-8" aria-label="Contato">
+    <section
+      class="bg-primary-600 py-20 px-4 sm:px-6 lg:px-8"
+      aria-label="Contato"
+    >
       <div class="max-w-4xl mx-auto text-center flex flex-col items-center gap-5">
         <EyebrowBadge text="✦ Estamos aqui para você" />
         <h1 class="font-display font-black text-4xl sm:text-5xl text-white leading-tight">
@@ -26,7 +29,10 @@ useHead({
     </section>
 
     <!-- Formulário + Info -->
-    <section class="bg-[#F5F0E8] py-20 px-4 sm:px-6 lg:px-8" aria-label="Formulário de contato">
+    <section
+      class="bg-cream py-20 px-4 sm:px-6 lg:px-8"
+      aria-label="Formulário de contato"
+    >
       <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
           <!-- Form (ocupa mais espaço) -->

@@ -5,31 +5,38 @@ const resources = [
     category: 'Artigo',
     title: 'Entendendo o TDAH',
     description: 'Um guia prático para pais e educadores sobre o transtorno de déficit de atenção e hiperatividade em crianças.',
-    to: '/blog',
+    to: '/blog'
   },
   {
     icon: 'i-lucide-file-down',
     category: 'Guia PDF',
     title: 'Escola Inclusiva',
     description: 'Como garantir os direitos do seu filho na escola e trabalhar em parceria com os professores.',
-    to: '/blog',
+    to: '/blog'
   },
   {
     icon: 'i-lucide-wrench',
     category: 'Ferramenta',
     title: 'Calculadora de Idade',
     description: 'Calcule a idade cronológica e os marcos de desenvolvimento esperados para a faixa etária da criança.',
-    to: '/ferramentas',
-  },
+    to: '/ferramentas'
+  }
 ]
 </script>
 
 <template>
-  <section class="bg-[#F5F0E8] py-20 px-4 sm:px-6 lg:px-8" aria-label="Recursos gratuitos em destaque">
+  <section
+    class="bg-cream py-20 px-4 sm:px-6 lg:px-8"
+    aria-label="Recursos gratuitos em destaque"
+  >
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-12">
         <EyebrowBadge text="✦ Para você" />
-        <SectionTitle title="Recursos gratuitos" centered class="mt-4" />
+        <SectionTitle
+          title="Recursos gratuitos"
+          centered
+          class="mt-4"
+        />
         <p class="font-sans text-zinc-500 mt-3 max-w-xl mx-auto">
           Materiais criados para apoiar famílias, educadores e profissionais da saúde.
         </p>
@@ -44,16 +51,28 @@ const resources = [
           <template #header>
             <div class="flex items-center gap-2 p-1">
               <div class="p-2 bg-primary-50 rounded-lg">
-                <UIcon :name="resource.icon" class="text-primary-500 text-xl" />
+                <UIcon
+                  :name="resource.icon"
+                  class="text-primary-500 text-xl"
+                />
               </div>
-              <UBadge color="secondary" variant="subtle" size="xs" class="rounded-full font-display font-bold uppercase tracking-wide text-[10px]">
+              <UBadge
+                color="secondary"
+                variant="subtle"
+                size="xs"
+                class="rounded-full font-display font-bold uppercase tracking-wide text-[10px]"
+              >
                 {{ resource.category }}
               </UBadge>
             </div>
           </template>
           <div class="flex flex-col gap-2">
-            <h3 class="font-display font-extrabold text-primary-700 text-base">{{ resource.title }}</h3>
-            <p class="font-sans text-zinc-500 text-sm leading-relaxed">{{ resource.description }}</p>
+            <h3 class="font-display font-extrabold text-primary-700 text-base">
+              {{ resource.title }}
+            </h3>
+            <p class="font-sans text-zinc-500 text-sm leading-relaxed">
+              {{ resource.description }}
+            </p>
           </div>
           <template #footer>
             <UButton
@@ -71,10 +90,20 @@ const resources = [
       </div>
 
       <div class="text-center mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-        <UButton to="/blog" color="primary" variant="outline" size="lg">
+        <UButton
+          to="/blog"
+          color="primary"
+          variant="outline"
+          size="lg"
+        >
           Ver o blog
         </UButton>
-        <UButton to="/ferramentas" color="primary" variant="ghost" size="lg">
+        <UButton
+          to="/ferramentas"
+          color="primary"
+          variant="ghost"
+          size="lg"
+        >
           Ver ferramentas
         </UButton>
       </div>

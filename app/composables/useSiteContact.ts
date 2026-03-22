@@ -8,6 +8,6 @@ export const useSiteContact = () => {
     mailtoUrl: `mailto:${pub.email}`,
     instagramUrl: `https://instagram.com/${pub.instagramHandle}`,
     instagramHandle: `@${pub.instagramHandle}`,
-    formspreeUrl: `https://formspree.io/f/${pub.formspreeId}`,
+    formspreeUrl: `https://formspree.io/f/${pub.formspreeId}`
   }
 }
