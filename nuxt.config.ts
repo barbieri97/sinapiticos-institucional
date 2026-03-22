@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxt/image",
     "@nuxt/fonts",
+    "nuxt-studio",
   ],
 
   components: [
@@ -79,6 +80,16 @@ export default defineNuxtConfig({
         styles: ["normal", "italic"],
       },
     ],
+  },
+
+  // ── Nuxt Studio — CMS visual auto-hospedado (/_studio) ──────────
+  // Auth via GitHub OAuth: cria um OAuth App em github.com/settings/developers
+  // Callback URL: https://[seu-dominio]/_studio/api/auth/github
+  studio: {
+    github: {
+      clientId: process.env.STUDIO_GITHUB_CLIENT_ID,
+      clientSecret: process.env.STUDIO_GITHUB_CLIENT_SECRET,
+    },
   },
 
   // ── Imagens: provider Vercel ─────────────────────────────────────
