@@ -2,9 +2,11 @@
 title: Meu filho consegue entender o que eu estou pensando?
 description: A partir de que idade as crianças percebem que as outras pessoas têm pensamentos e sentimentos diferentes dos seus? Entenda como essa habilidade se desenvolve — e o que você pode fazer para ajudar.
 seo:
-  title: O que é Teoria da Mente? file
+  title: O que é Teoria da Mente?
   description: A partir de que idade as crianças percebem que as outras pessoas têm pensamentos e sentimentos diferentes dos seus? Entenda como essa habilidade se desenvolve — e o que você pode fazer para ajudar.
 category: artigo
+date: '2026-03-01'
+icon: i-lucide-brain
 ---
 
 # Meu filho consegue entender o que eu estou pensando?
