@@ -5,18 +5,21 @@ const resources = [
     category: 'Artigo',
     title: 'Entendendo o TDAH',
     description: 'Um guia prático para pais e educadores sobre o transtorno de déficit de atenção e hiperatividade em crianças.',
+    to: '/blog',
   },
   {
     icon: 'i-lucide-file-down',
     category: 'Guia PDF',
     title: 'Escola Inclusiva',
     description: 'Como garantir os direitos do seu filho na escola e trabalhar em parceria com os professores.',
+    to: '/blog',
   },
   {
     icon: 'i-lucide-wrench',
     category: 'Ferramenta',
     title: 'Calculadora de Idade',
     description: 'Calcule a idade cronológica e os marcos de desenvolvimento esperados para a faixa etária da criança.',
+    to: '/ferramentas',
   },
 ]
 </script>
@@ -54,7 +57,7 @@ const resources = [
           </div>
           <template #footer>
             <UButton
-              to="/recursos"
+              :to="resource.to"
               color="primary"
               variant="ghost"
               size="sm"
@@ -67,9 +70,12 @@ const resources = [
         </UCard>
       </div>
 
-      <div class="text-center mt-10">
-        <UButton to="/recursos" color="primary" variant="outline" size="lg">
-          Ver todos os recursos
+      <div class="text-center mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+        <UButton to="/blog" color="primary" variant="outline" size="lg">
+          Ver o blog
+        </UButton>
+        <UButton to="/ferramentas" color="primary" variant="ghost" size="lg">
+          Ver ferramentas
         </UButton>
       </div>
     </div>

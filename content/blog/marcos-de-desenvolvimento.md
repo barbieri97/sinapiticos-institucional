@@ -1,6 +1,6 @@
 ---
 title: Marcos do desenvolvimento infantil — o que esperar em cada fase
-category: artigo
+category: neurodesenvolvimento
 date: 2026-02-10
 description: Entenda os principais marcos do desenvolvimento neuropsicomotor da criança de 0 a 10 anos e quando buscar uma avaliação especializada.
 icon: i-lucide-milestone
