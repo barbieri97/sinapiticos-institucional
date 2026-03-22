@@ -1,7 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { readFileSync } from 'node:fs'
-
-const { version } = JSON.parse(readFileSync('./package.json', 'utf-8'))
+const appVersion = process.env.npm_package_version ?? '0.0.0'
 
 export default defineNuxtConfig({
   modules: [
@@ -31,7 +29,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      appVersion: version,
+      appVersion: appVersion,
       whatsappNumber: '',
       whatsappDisplay: '',
       email: '',

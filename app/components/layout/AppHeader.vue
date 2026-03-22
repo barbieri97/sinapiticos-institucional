@@ -44,8 +44,7 @@ const navItems: NavigationMenuItem[] = [
       :items="navItems"
       variant="link"
       :ui="{
-        link: 'font-display font-bold text-sm text-zinc-600 hover:text-primary-600',
-        linkActive: 'text-primary-600'
+        link: 'font-display font-bold text-sm text-zinc-600 hover:text-primary-600'
       }"
     />
 
@@ -69,8 +68,7 @@ const navItems: NavigationMenuItem[] = [
         variant="link"
         class="-mx-2.5"
         :ui="{
-          link: 'font-display font-bold text-base text-zinc-700 hover:text-primary-600',
-          linkActive: 'text-primary-600'
+          link: 'font-display font-bold text-base text-zinc-700 hover:text-primary-600'
         }"
       />
       <div class="pt-4 mt-4 border-t border-primary-100">
@@ -86,3 +84,9 @@ const navItems: NavigationMenuItem[] = [
     </template>
   </UHeader>
 </template>
+
+<style scoped>
+:deep([data-active]) {
+  color: var(--color-primary-600);
+}
+</style>
