@@ -84,7 +84,7 @@ export default defineNuxtConfig({
 
   // ── Nuxt Studio — CMS visual auto-hospedado (/_studio) ──────────
   // Auth via GitHub OAuth: cria um OAuth App em github.com/settings/developers
-  // Callback URL: https://[seu-dominio]/_studio/api/auth/github
+  // Callback URL: https://[seu-dominio]/__nuxt_studio/auth/github
   studio: {
     auth: {
       github: {
