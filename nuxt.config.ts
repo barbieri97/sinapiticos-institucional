@@ -86,9 +86,11 @@ export default defineNuxtConfig({
   // Auth via GitHub OAuth: cria um OAuth App em github.com/settings/developers
   // Callback URL: https://[seu-dominio]/_studio/api/auth/github
   studio: {
-    github: {
-      clientId: process.env.STUDIO_GITHUB_CLIENT_ID,
-      clientSecret: process.env.STUDIO_GITHUB_CLIENT_SECRET,
+    auth: {
+      github: {
+        clientId: process.env.STUDIO_GITHUB_CLIENT_ID,
+        clientSecret: process.env.STUDIO_GITHUB_CLIENT_SECRET,
+      },
     },
   },
 
