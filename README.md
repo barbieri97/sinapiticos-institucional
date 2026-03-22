@@ -1,60 +1,75 @@
-# Nuxt Starter Template
+# sinapíticos: instituto de desenvolvimento infantil — Site Institucional
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+Site institucional do **sinapíticos: instituto de desenvolvimento infantil**, fundado por **André Barbieri** e **Carolina Teixeira**, ambos neuropsicólogos infantis.
 
-Use this template to get started with [Nuxt UI](https://ui.nuxt.com) quickly.
+O site é narrativo e acolhedor: apresenta a história do instituto, serviços oferecidos, equipe fundadora, ação social e recursos gratuitos para famílias e profissionais — transmitindo que ciência e carinho com os "piticos" caminham juntos.
 
-- [Live demo](https://starter-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/docs/getting-started/installation/nuxt)
+---
 
-<a href="https://starter-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png">
-    <img alt="Nuxt Starter Template" src="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png" width="830" height="466">
-  </picture>
-</a>
+## Stack
 
-> The starter template for Vue is on https://github.com/nuxt-ui-templates/starter-vue.
+- **Nuxt 4** (Vue 3, Composition API, `<script setup lang="ts">`)
+- **NuxtUI v3** — biblioteca de componentes principal
+- **Tailwind CSS v4** — utilitários e tema customizado (`@theme`)
+- **@nuxt/content** — gestão de recursos gratuitos em Markdown
+- **@nuxt/image** — otimização de imagens via Vercel Image Optimization
+- **@nuxt/fonts** — Nunito (display) + DM Sans (body) via Google Fonts
+- **Deploy:** Vercel (SSR com `nuxt build`)
 
-## Quick Start
+---
 
-```bash [Terminal]
-npm create nuxt@latest -- -t ui
-```
-
-## Deploy your own
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=starter&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fstarter&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fstarter-dark.png&demo-url=https%3A%2F%2Fstarter-template.nuxt.dev%2F&demo-title=Nuxt%20Starter%20Template&demo-description=A%20minimal%20template%20to%20get%20started%20with%20Nuxt%20UI.)
-
-## Setup
-
-Make sure to install the dependencies:
+## Desenvolvimento
 
 ```bash
+# Instalar dependências
 pnpm install
-```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
+# Servidor de desenvolvimento em http://localhost:3000
 pnpm dev
-```
 
-## Production
-
-Build the application for production:
-
-```bash
+# Build para produção
 pnpm build
-```
 
-Locally preview production build:
-
-```bash
+# Preview do build local
 pnpm preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+---
+
+## Páginas
+
+| Rota | Descrição |
+|---|---|
+| `/` | Home |
+| `/sobre` | Nossa história e valores |
+| `/servicos` | Avaliação, Psicoterapia e Orientação Parental |
+| `/equipe` | Equipe fundadora |
+| `/acao-social` | Programa de vagas sociais |
+| `/recursos` | Recursos gratuitos (artigos, guias, ferramentas, links) |
+| `/contato` | Formulário de contato e agendamento |
+
+---
+
+## TODO — Backlog de Desenvolvimento
+
+### Assets & Conteúdo
+
+- [ ] Criar favicon (ícone da aba/navegador) a partir do logo
+- [ ] Adicionar fotos reais dos fundadores (André e Carolina) em `/equipe` e na home
+- [ ] Criar/revisar os conteúdos reais: artigos, guias e links úteis em `content/recursos/`
+- [ ] Expandir o uso do `@nuxt/content` para facilitar a edição de conteúdo de outras seções do site (ex: serviços, valores, equipe)
+
+### Ferramentas Interativas
+
+- [ ] Implementar ferramenta: **Marcos do Desenvolvimento** (checklist por faixa etária)
+- [ ] Implementar ferramenta: **Simulação da Neurulação** (visualização interativa)
+- [ ] Refatorar arquitetura das ferramentas: mover dados para um composable `useFerramentas` onde cada ferramenta tenha `{ titulo, descricao, link, ativa }` — e o card na página de recursos controlar exibição com base no campo `ativa`
+
+### Home
+
+- [ ] Mudar `HomeResources` para buscar artigos e ferramentas reais via `@nuxt/content` (não hardcoded), mantendo o direcionamento para `/recursos`
+
+### Página de Recursos
+
+- [ ] Adicionar "paginação leve": exibir somente os conteúdos mais recentes em `/recursos` e redirecionar para `/recursos/conteudos` para ver todos
+- [ ] Mudar o sistema de categorias: definir categoria(s) nos metadados do próprio arquivo `.md` (ex: `tags: [TDAH, neurodesenvolvimento, linguagem]`) em vez de usar a estrutura de pastas como critério — e adaptar a lógica de filtragem na página de listagem
