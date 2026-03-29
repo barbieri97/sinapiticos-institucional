@@ -12,7 +12,7 @@
         <span class="text-secondary-500">Isso é o que somos.</span>
       </p>
       <p class="font-sans text-zinc-500 text-lg mt-6 max-w-2xl mx-auto leading-relaxed">
-        Acreditamos que toda criança tem o direito de ser compreendida, apoiada e cuidada com o que há de melhor na neuropsicologia — sem abrir mão do acolhimento que cada pitico merece.
+        Acreditamos que toda criança tem o direito de ser compreendida, apoiada e cuidada com o que há de melhor na ciência — sem abrir mão do acolhimento que cada pitico merece.
       </p>
     </div>
   </section>

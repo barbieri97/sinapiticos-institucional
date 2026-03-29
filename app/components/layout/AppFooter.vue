@@ -3,18 +3,12 @@ import type { FooterColumn } from '@nuxt/ui'
 
 const { appVersion } = useRuntimeConfig().public
 const contact = useSiteContact()
+const { navItems } = useNavigation()
 
 const columns: FooterColumn[] = [
   {
     label: 'Navegação',
-    children: [
-      { label: 'Sobre', to: '/sobre' },
-      { label: 'Serviços', to: '/servicos' },
-      { label: 'Equipe', to: '/equipe' },
-      { label: 'Ação Social', to: '/acao-social' },
-      { label: 'Recursos', to: '/recursos' },
-      { label: 'Contato', to: '/contato' }
-    ]
+    children: navItems
   },
   {
     label: 'Contato',

@@ -5,6 +5,7 @@ defineProps<{
   formacao: string
   frase: string
   imageSrc?: string
+  instagram?: string
   color?: 'primary' | 'secondary'
 }>()
 </script>
@@ -60,6 +61,18 @@ defineProps<{
           "{{ frase }}"
         </p>
       </blockquote>
+
+      <!-- Instagram -->
+      <NuxtLink
+        v-if="instagram"
+        :to="`https://instagram.com/${instagram.replace('@', '')}`"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-1.5 font-sans text-sm text-zinc-400 hover:text-primary-500 transition-colors"
+      >
+        <UIcon name="i-lucide-instagram" class="text-base shrink-0" />
+        {{ instagram.startsWith('@') ? instagram : `@${instagram}` }}
+      </NuxtLink>
     </div>
   </UCard>
 </template>

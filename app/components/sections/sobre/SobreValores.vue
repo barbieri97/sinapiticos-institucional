@@ -31,7 +31,7 @@ const missaoVisao = [
   {
     icon: 'i-lucide-target',
     label: 'Missão',
-    text: 'Oferecer atendimento neuropsicológico infantil de excelência científica, com cuidado humano genuíno — aproximando famílias do conhecimento e dos mecanismos que garantem os direitos das crianças ao desenvolvimento saudável.',
+    text: 'Oferecer atendimento infantil de excelência científica, com cuidado humano genuíno — aproximando famílias do conhecimento e dos mecanismos que garantem os direitos das crianças ao desenvolvimento saudável.',
     color: 'bg-primary-50 border-primary-200',
     iconColor: 'text-primary-500'
   },

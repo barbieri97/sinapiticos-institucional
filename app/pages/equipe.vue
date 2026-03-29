@@ -38,16 +38,20 @@ useHead({
           <MembroCard
             nome="André Barbieri"
             cargo="Neuropsicólogo Infantil"
-            formacao="Mestre em Neuropsicologia, especialista em avaliação neuropsicológica infantil e desenvolvimento cognitivo."
+            formacao="Mestrando em ciências da saúde, especialista em avaliação neuropsicológica infantil e desenvolvimento cognitivo e professor."
             frase="Cada criança é um universo único que merece ser compreendido com ciência e com o coração."
             color="primary"
+            imageSrc="/images/founders/andre.jpeg"
+            instagram="@barbieri.psi"
           />
           <MembroCard
             nome="Carolina Teixeira"
             cargo="Neuropsicóloga Infantil"
-            formacao="Doutoranda em Psicologia do Desenvolvimento, especialista em psicoterapia infantil e orientação parental."
+            formacao="Especialista em neuropsicologia e psicóloga infantojuvenil."
             frase="Acredito que quando cuidamos bem de uma criança, cuidamos de toda a família e de toda a sociedade."
             color="secondary"
+            imageSrc="/images/founders/carol.jpeg"
+            instagram="@psicarolinateixeira"
           />
         </div>
 

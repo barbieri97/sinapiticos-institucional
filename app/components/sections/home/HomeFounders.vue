@@ -41,10 +41,15 @@
         <!-- Founder cards -->
         <div class="grid grid-cols-2 gap-4">
           <div class="flex flex-col items-center gap-3 bg-primary-50 rounded-2xl p-6 text-center">
-            <div class="w-20 h-20 rounded-full bg-primary-200 flex items-center justify-center">
-              <UIcon
-                name="i-lucide-user-round"
-                class="text-primary-600 text-3xl"
+            <div class="w-20 h-20 rounded-full overflow-hidden">
+              <NuxtImg
+                src="/images/founders/andre.jpeg"
+                alt="André Barbieri, Neuropsicólogo Infantil"
+                loading="lazy"
+                width="80"
+                height="80"
+                sizes="80px"
+                class="w-full h-full object-cover object-top rounded-full"
               />
             </div>
             <div>
@@ -54,13 +59,27 @@
               <p class="font-sans text-zinc-500 text-xs mt-1">
                 Neuropsicólogo Infantil
               </p>
+              <NuxtLink
+                to="https://instagram.com/barbieri.psi"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center gap-1 font-sans text-xs text-zinc-400 hover:text-primary-500 transition-colors mt-1"
+              >
+                <UIcon name="i-lucide-instagram" class="text-sm" />
+                @barbieri.psi
+              </NuxtLink>
             </div>
           </div>
           <div class="flex flex-col items-center gap-3 bg-secondary-50 rounded-2xl p-6 text-center">
-            <div class="w-20 h-20 rounded-full bg-secondary-200 flex items-center justify-center">
-              <UIcon
-                name="i-lucide-user-round"
-                class="text-secondary-600 text-3xl"
+            <div class="w-20 h-20 rounded-full overflow-hidden">
+              <NuxtImg
+                src="/images/founders/carol.jpeg"
+                alt="Carolina Teixeira, Neuropsicóloga Infantil"
+                loading="lazy"
+                width="80"
+                height="80"
+                sizes="80px"
+                class="w-full h-full object-cover object-top rounded-full"
               />
             </div>
             <div>
@@ -70,6 +89,15 @@
               <p class="font-sans text-zinc-500 text-xs mt-1">
                 Neuropsicóloga Infantil
               </p>
+              <NuxtLink
+                to="https://instagram.com/psicarolinateixeira"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center gap-1 font-sans text-xs text-zinc-400 hover:text-secondary-500 transition-colors mt-1"
+              >
+                <UIcon name="i-lucide-instagram" class="text-sm" />
+                @psicarolinateixeira
+              </NuxtLink>
             </div>
           </div>
         </div>

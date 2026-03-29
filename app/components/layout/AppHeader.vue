@@ -1,16 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
-
-const navItems: NavigationMenuItem[] = [
-  { label: 'Home', to: '/' },
-  { label: 'Sobre', to: '/sobre' },
-  { label: 'Serviços', to: '/servicos' },
-  { label: 'Equipe', to: '/equipe' },
-  { label: 'Ação Social', to: '/acao-social' },
-  { label: 'Blog', to: '/blog' },
-  { label: 'Ferramentas', to: '/ferramentas' },
-  { label: 'Contato', to: '/contato' }
-]
+const { navItems } = useNavigation()
 </script>
 
 <template>

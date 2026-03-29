@@ -3,7 +3,7 @@ const services = [
   {
     icon: 'i-lucide-brain',
     title: 'Avaliação Neuropsicológica',
-    description: 'Investigação detalhada das funções cognitivas da criança — atenção, memória, linguagem, aprendizagem — para entender como ela pensa e aprende.'
+    description: 'Investigação detalhada das funções cognitivas da criança — atenção, memória, linguagem, aprendizagem — para entender como ela raciocina e aprende.'
   },
   {
     icon: 'i-lucide-heart',

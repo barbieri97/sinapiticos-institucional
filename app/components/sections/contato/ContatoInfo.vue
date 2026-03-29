@@ -26,7 +26,7 @@ const infos = [
   {
     icon: 'i-lucide-map-pin',
     label: 'Localização',
-    value: 'São Paulo, SP',
+    value: 'Santo André, SP',
     href: undefined,
     target: undefined
   }

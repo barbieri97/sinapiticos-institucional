@@ -52,7 +52,7 @@
               class="text-primary-200 text-4xl mb-4"
             />
             <p class="font-sans font-medium italic text-lg leading-relaxed text-primary-50">
-              "Ciência e afeto não são opostos: são a mesma coisa."
+              "Ciência e carinho caminham juntos em tudo o que fazemos."
             </p>
             <p class="font-display font-bold text-primary-200 text-sm mt-4">
               — André & Carolina, fundadores
