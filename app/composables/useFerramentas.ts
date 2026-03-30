@@ -16,10 +16,11 @@ export const useFerramentas = (): Ferramenta[] => [
   },
   {
     icon: 'i-lucide-list-checks',
-    title: 'Checklist de Marcos de Desenvolvimento',
+    title: 'Marcos do Desenvolvimento',
     description:
-      'Verifique se a criança está atingindo os marcos esperados para a idade em áreas como linguagem, motricidade e cognição.',
-    status: 'soon'
+      'Visualize os marcos esperados por faixa etária em linguagem, motricidade, cognição e desenvolvimento social-emocional — baseado em CDC e AAP.',
+    status: 'available',
+    slug: 'marcos-desenvolvimento'
   },
   {
     icon: 'i-lucide-graduation-cap',
@@ -34,5 +35,13 @@ export const useFerramentas = (): Ferramenta[] => [
     description:
       'Encontre o Centro de Atenção Psicossocial Infanto-Juvenil mais próximo da sua região para atendimento pelo SUS.',
     status: 'soon'
+  },
+  {
+    icon: 'i-lucide-zap',
+    title: 'Sinaptogênese Neural',
+    description:
+      'Animação interativa das 5 fases do desenvolvimento neural — da proliferação neuronal à poda sináptica. Explore a neurociência do desenvolvimento infantil.',
+    status: 'available',
+    slug: 'sinaptogenese'
   }
 ]

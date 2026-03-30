@@ -49,8 +49,8 @@ const ferramentas = useFerramentas()
           <div>
             <SectionTitle title="Ferramentas disponíveis" />
             <p class="font-sans text-zinc-500 mt-3 max-w-xl">
-              Em breve você terá acesso a calculadoras, checklists e guias
-              interativos desenvolvidos pelos nossos especialistas.
+              Calculadoras, checklists e guias interativos desenvolvidos pelos
+              nossos especialistas — gratuitos e sem cadastro.
             </p>
           </div>
           <UBadge
@@ -62,7 +62,7 @@ const ferramentas = useFerramentas()
           </UBadge>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <UCard
             v-for="ferramenta in ferramentas"
             :key="ferramenta.title"
@@ -84,6 +84,15 @@ const ferramentas = useFerramentas()
                   class="rounded-full font-display font-bold text-[10px] uppercase tracking-wide shrink-0"
                 >
                   Em breve
+                </UBadge>
+                <UBadge
+                  v-else
+                  color="primary"
+                  variant="subtle"
+                  size="xs"
+                  class="rounded-full font-display font-bold text-[10px] uppercase tracking-wide shrink-0"
+                >
+                  Disponível
                 </UBadge>
               </div>
 
@@ -115,7 +124,7 @@ const ferramentas = useFerramentas()
                 color="primary"
                 variant="solid"
                 size="sm"
-                icon="i-lucide-arrow-right"
+                trailing-icon="i-lucide-arrow-right"
                 class="w-full justify-center"
               >
                 Acessar ferramenta
