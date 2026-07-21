@@ -12,7 +12,8 @@ export const useFerramentas = (): Ferramenta[] => [
     title: 'Calculadora de Idade Cronológica',
     description:
       'Calcule a idade exata da criança em anos, meses e dias — útil para relatórios e laudos que exigem precisão.',
-    status: 'soon'
+    status: 'available',
+    slug: 'calculadora-idade'
   },
   {
     icon: 'i-lucide-list-checks',
