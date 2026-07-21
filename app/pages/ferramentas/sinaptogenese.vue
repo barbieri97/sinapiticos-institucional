@@ -31,7 +31,10 @@ function handleSeekPhase(phase: number) {
           to="/ferramentas"
           class="font-sans text-primary-200 hover:text-white text-sm transition-colors flex items-center gap-1.5 self-start"
         >
-          <UIcon name="i-lucide-arrow-left" class="text-sm" />
+          <UIcon
+            name="i-lucide-arrow-left"
+            class="text-sm"
+          />
           Voltar às ferramentas
         </NuxtLink>
         <EyebrowBadge text="✦ Ferramenta interativa" />
@@ -61,7 +64,10 @@ function handleSeekPhase(phase: number) {
               />
               <template #fallback>
                 <div class="canvas-fallback rounded-2xl flex items-center justify-center">
-                  <UIcon name="i-lucide-loader-circle" class="text-primary-300 text-4xl animate-spin" />
+                  <UIcon
+                    name="i-lucide-loader-circle"
+                    class="text-primary-300 text-4xl animate-spin"
+                  />
                 </div>
               </template>
             </ClientOnly>
@@ -115,7 +121,10 @@ function handleSeekPhase(phase: number) {
             <!-- Why it matters -->
             <div class="bg-primary-50 rounded-2xl border border-primary-100 p-5 flex flex-col gap-3">
               <div class="flex items-center gap-2">
-                <UIcon name="i-lucide-info" class="text-primary-500 text-lg shrink-0" />
+                <UIcon
+                  name="i-lucide-info"
+                  class="text-primary-500 text-lg shrink-0"
+                />
                 <h4 class="font-display font-extrabold text-primary-700 text-sm">
                   Por que isso importa?
                 </h4>

@@ -70,7 +70,10 @@ defineProps<{
         rel="noopener noreferrer"
         class="flex items-center gap-1.5 font-sans text-sm text-zinc-400 hover:text-primary-500 transition-colors"
       >
-        <UIcon name="i-lucide-instagram" class="text-base shrink-0" />
+        <UIcon
+          name="i-lucide-instagram"
+          class="text-base shrink-0"
+        />
         {{ instagram.startsWith('@') ? instagram : `@${instagram}` }}
       </NuxtLink>
     </div>

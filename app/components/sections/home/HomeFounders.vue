@@ -65,7 +65,10 @@
                 rel="noopener noreferrer"
                 class="flex items-center justify-center gap-1 font-sans text-xs text-zinc-400 hover:text-primary-500 transition-colors mt-1"
               >
-                <UIcon name="i-lucide-instagram" class="text-sm" />
+                <UIcon
+                  name="i-lucide-instagram"
+                  class="text-sm"
+                />
                 @barbieri.psi
               </NuxtLink>
             </div>
@@ -95,7 +98,10 @@
                 rel="noopener noreferrer"
                 class="flex items-center justify-center gap-1 font-sans text-xs text-zinc-400 hover:text-secondary-500 transition-colors mt-1"
               >
-                <UIcon name="i-lucide-instagram" class="text-sm" />
+                <UIcon
+                  name="i-lucide-instagram"
+                  class="text-sm"
+                />
                 @psicarolinateixeira
               </NuxtLink>
             </div>

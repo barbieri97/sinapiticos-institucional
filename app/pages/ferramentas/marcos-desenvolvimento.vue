@@ -37,7 +37,10 @@ const {
           to="/ferramentas"
           class="font-sans text-primary-200 hover:text-white text-sm transition-colors flex items-center gap-1.5 self-start"
         >
-          <UIcon name="i-lucide-arrow-left" class="text-sm" />
+          <UIcon
+            name="i-lucide-arrow-left"
+            class="text-sm"
+          />
           Voltar às ferramentas
         </NuxtLink>
         <EyebrowBadge text="✦ Ferramenta interativa" />

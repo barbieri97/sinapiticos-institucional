@@ -16,17 +16,32 @@ defineProps<{
 </script>
 
 <template>
-  <div class="bg-white rounded-2xl border border-zinc-100 overflow-hidden" :class="domain.borderClass">
+  <div
+    class="bg-white rounded-2xl border border-zinc-100 overflow-hidden"
+    :class="domain.borderClass"
+  >
     <!-- Header -->
     <div class="flex items-center gap-3 px-5 py-4 border-b border-zinc-100">
-      <div class="p-2 rounded-xl" :class="domain.bgClass">
-        <UIcon :name="domain.icon" class="text-xl" :class="domain.iconClass" />
+      <div
+        class="p-2 rounded-xl"
+        :class="domain.bgClass"
+      >
+        <UIcon
+          :name="domain.icon"
+          class="text-xl"
+          :class="domain.iconClass"
+        />
       </div>
       <div>
-        <h3 class="font-display font-extrabold text-sm" :class="domain.titleClass">
+        <h3
+          class="font-display font-extrabold text-sm"
+          :class="domain.titleClass"
+        >
           {{ domain.label }}
         </h3>
-        <p class="font-sans text-xs text-zinc-400">{{ domain.desc }}</p>
+        <p class="font-sans text-xs text-zinc-400">
+          {{ domain.desc }}
+        </p>
       </div>
     </div>
 
