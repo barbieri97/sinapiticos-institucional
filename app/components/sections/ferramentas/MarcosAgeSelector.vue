@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { MilestonesData } from '~/composables/useMarcosDesenvolvimento'
 
-const props = defineProps<{
+defineProps<{
   ageOrder: string[]
   milestones: MilestonesData
   selectedAge: string
@@ -34,7 +34,7 @@ const emit = defineEmits<{
         "
         @click="emit('select', age)"
       >
-        {{ milestones[age].label }}
+        {{ milestones[age]?.label }}
       </button>
     </div>
   </div>

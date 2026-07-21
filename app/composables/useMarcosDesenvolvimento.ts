@@ -396,25 +396,25 @@ export function useMarcosDesenvolvimento() {
   const selectedIndex = computed(() => AGE_ORDER.indexOf(selectedAge.value))
 
   const prevAge = computed<string | null>(() =>
-    selectedIndex.value > 0 ? AGE_ORDER[selectedIndex.value - 1] : null
+    selectedIndex.value > 0 ? AGE_ORDER[selectedIndex.value - 1] ?? null : null
   )
 
   const nextAge = computed<string | null>(() =>
     selectedIndex.value < AGE_ORDER.length - 1
-      ? AGE_ORDER[selectedIndex.value + 1]
+      ? AGE_ORDER[selectedIndex.value + 1] ?? null
       : null
   )
 
   const currentMilestones = computed<AgeMilestones>(
-    () => milestonesData[selectedAge.value]
+    () => milestonesData[selectedAge.value]!
   )
 
   const prevMilestones = computed<AgeMilestones | null>(() =>
-    prevAge.value ? milestonesData[prevAge.value] : null
+    prevAge.value ? milestonesData[prevAge.value] ?? null : null
   )
 
   const nextMilestones = computed<AgeMilestones | null>(() =>
-    nextAge.value ? milestonesData[nextAge.value] : null
+    nextAge.value ? milestonesData[nextAge.value] ?? null : null
   )
 
   return {

@@ -41,7 +41,7 @@ useHead({
             formacao="Mestrando em ciências da saúde, especialista em avaliação neuropsicológica infantil e desenvolvimento cognitivo e professor."
             frase="Cada criança é um universo único que merece ser compreendido com ciência e com o coração."
             color="primary"
-            imageSrc="/images/founders/andre.jpeg"
+            image-src="/images/founders/andre.jpeg"
             instagram="@barbieri.psi"
           />
           <MembroCard
@@ -50,7 +50,7 @@ useHead({
             formacao="Especialista em neuropsicologia e psicóloga infantojuvenil."
             frase="Acredito que quando cuidamos bem de uma criança, cuidamos de toda a família e de toda a sociedade."
             color="secondary"
-            imageSrc="/images/founders/carol.jpeg"
+            image-src="/images/founders/carol.jpeg"
             instagram="@psicarolinateixeira"
           />
         </div>

@@ -6,10 +6,8 @@ defineProps<{
 }>()
 
 const emit = defineEmits<{
-  (e: 'update:speed', value: number): void
-  (e: 'update:neuronCount', value: number): void
-  (e: 'toggle-pause'): void
-  (e: 'restart'): void
+  (e: 'update:speed' | 'update:neuronCount', value: number): void
+  (e: 'toggle-pause' | 'restart'): void
 }>()
 </script>
 
@@ -17,7 +15,9 @@ const emit = defineEmits<{
   <div class="bg-white rounded-2xl border border-zinc-100 p-5 flex flex-col gap-5">
     <!-- Header + action buttons -->
     <div class="flex items-center justify-between">
-      <h4 class="font-display font-extrabold text-primary-700 text-sm">Controles</h4>
+      <h4 class="font-display font-extrabold text-primary-700 text-sm">
+        Controles
+      </h4>
       <div class="flex gap-2">
         <UButton
           :icon="isPaused ? 'i-lucide-play' : 'i-lucide-pause'"
@@ -55,7 +55,7 @@ const emit = defineEmits<{
         class="w-full h-1.5 rounded-full appearance-none cursor-pointer accent-primary-500 bg-zinc-100"
         aria-label="Velocidade da animação"
         @input="emit('update:speed', Number(($event.target as HTMLInputElement).value))"
-      />
+      >
       <div class="flex justify-between font-sans text-[10px] text-zinc-400">
         <span>Lento</span>
         <span>Rápido</span>
@@ -79,7 +79,7 @@ const emit = defineEmits<{
         class="w-full h-1.5 rounded-full appearance-none cursor-pointer accent-primary-500 bg-zinc-100"
         aria-label="Número de neurônios na animação"
         @input="emit('update:neuronCount', Number(($event.target as HTMLInputElement).value))"
-      />
+      >
       <div class="flex justify-between font-sans text-[10px] text-zinc-400">
         <span>Menos</span>
         <span>Mais</span>

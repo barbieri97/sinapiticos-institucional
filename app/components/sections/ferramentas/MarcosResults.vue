@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { DomainConfig, AgeMilestones, MilestonesData } from '~/composables/useMarcosDesenvolvimento'
 
-const props = defineProps<{
+defineProps<{
   domains: DomainConfig[]
   selectedAge: string
   milestones: MilestonesData
@@ -18,17 +18,23 @@ const props = defineProps<{
     <!-- Legend -->
     <div class="flex flex-wrap items-center gap-4 px-5 py-3 bg-white rounded-2xl border border-zinc-100">
       <span class="font-display font-bold text-xs text-zinc-500 uppercase tracking-wider">Legenda:</span>
-      <span v-if="prevAge" class="flex items-center gap-1.5 font-sans text-xs text-zinc-600">
+      <span
+        v-if="prevAge"
+        class="flex items-center gap-1.5 font-sans text-xs text-zinc-600"
+      >
         <span class="w-2.5 h-2.5 rounded-full bg-secondary-400 inline-block shrink-0" />
-        Etapa anterior ({{ milestones[prevAge].label }})
+        Etapa anterior ({{ milestones[prevAge]!.label }})
       </span>
       <span class="flex items-center gap-1.5 font-sans text-xs text-zinc-800 font-medium">
         <span class="w-2.5 h-2.5 rounded-full bg-primary-500 inline-block shrink-0" />
-        Esperado agora ({{ milestones[selectedAge].label }})
+        Esperado agora ({{ milestones[selectedAge]!.label }})
       </span>
-      <span v-if="nextAge" class="flex items-center gap-1.5 font-sans text-xs text-zinc-600">
+      <span
+        v-if="nextAge"
+        class="flex items-center gap-1.5 font-sans text-xs text-zinc-600"
+      >
         <span class="w-2.5 h-2.5 rounded-full bg-blue-400 inline-block shrink-0" />
-        Próxima etapa ({{ milestones[nextAge].label }})
+        Próxima etapa ({{ milestones[nextAge]!.label }})
       </span>
     </div>
 
@@ -40,17 +46,17 @@ const props = defineProps<{
         :domain="domain"
         :prev="prevMilestones && prevAge ? {
           items: prevMilestones[domain.key],
-          label: milestones[prevAge].label,
+          label: milestones[prevAge]!.label,
           type: 'prev'
         } : null"
         :current="{
           items: currentMilestones[domain.key],
-          label: milestones[selectedAge].label,
+          label: milestones[selectedAge]!.label,
           type: 'current'
         }"
         :next="nextMilestones && nextAge ? {
           items: nextMilestones[domain.key],
-          label: milestones[nextAge].label,
+          label: milestones[nextAge]!.label,
           type: 'next'
         } : null"
       />
