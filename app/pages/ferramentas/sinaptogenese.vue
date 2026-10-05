@@ -50,7 +50,7 @@ function handleSeekPhase(phase: number) {
 
     <!-- Tool body -->
     <section
-      class="bg-[#F5F0E8] py-16 px-4 sm:px-6 lg:px-8"
+      class="bg-cream py-16 px-4 sm:px-6 lg:px-8"
       aria-label="Animação de sinaptogênese"
     >
       <div class="max-w-7xl mx-auto">

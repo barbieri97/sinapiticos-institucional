@@ -20,7 +20,7 @@ export default defineAppConfig({
     },
     card: {
       slots: {
-        root: 'rounded-[1rem] shadow-sm'
+        root: 'rounded-card shadow-sm'
       }
     }
   }

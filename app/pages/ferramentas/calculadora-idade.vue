@@ -43,7 +43,7 @@ useHead({
 
     <!-- Tool body -->
     <section
-      class="bg-[#F5F0E8] py-16 px-4 sm:px-6 lg:px-8"
+      class="bg-cream py-16 px-4 sm:px-6 lg:px-8"
       aria-label="Cálculo de idade cronológica"
     >
       <div class="max-w-3xl mx-auto flex flex-col gap-10">
